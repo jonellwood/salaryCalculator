@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <hr>   
+    <!-- <form id="salaryCalculator" method="post" action="/home" onsubmit="return false"> -->
+    <form id="salaryCalculator" method="post" action="/home" >
+        <label for="paygrade1">Select First Pay Grade: </label>
+        <!-- <select id="paygrade1" class="form-select" onchange="showfields(this)"> -->
+        <select id="paygrade1" class="form-select">
+            <!-- <option value="NULL"></option> -->
+            <option value="1">Grade 1</option>
+            <option value="2">Grade 2</option>
+            <option value="3">Grade 3</option>
+            <option value="4">Grade 4</option>
+            <option value="5">Grade 5</option>
+            <option value="6">Grade 6</option>
+            <option value="7">Grade 7</option>
+            <option value="8">Grade 8</option>
+            <option value="9">Grade 9</option>
+        </select>
+        <div>
+            <label for="paystep1">Step Select First Pay Step:</label>
+            <!-- <select id="paystep1" class="form-select" onchange="showfields(this)"> -->
+            <select id="paystep1" class="form-select">
+                <!-- <option value="NULL"></option> -->
+                <option value="1">Step 1</option>
+                <option value="2">Step 2</option>
+                <option value="3">Step 3</option>
+                <option value="4">Step 4</option>
+                <option value="5">Step 5</option>
+                <option value="6">Step 6</option>
+                <option value="7">Step 7</option>
+                <option value="8">Step 8</option>
+                <option value="9">Step 9</option>
+            </select>    
+        </div>
+        <hr>
+        <label for="paygrade2">Select Second Pay Grade: </label>
+        <!-- <select id="paygrade2" class="form-select" onchange="showfields(this)"> -->
+        <select id="paygrade2" class="form-select">
+            <!-- <option value="NULL"></option> -->
+            <option value="1">Grade 1</option>
+            <option value="2">Grade 2</option>
+            <option value="3">Grade 3</option>
+            <option value="4">Grade 4</option>
+            <option value="5">Grade 5</option>
+            <option value="6">Grade 6</option>
+            <option value="7">Grade 7</option>
+            <option value="8">Grade 8</option>
+            <option value="9">Grade 9</option>
+        </select>
+        <div>
+            <label for="paystep2">Select Second Pay Step:</label>
+            <!-- <select id="paystep2" class="form-select" onchange="showfields(this)"> -->
+            <select id="paystep2" class="form-select" >
+                <!-- <option value="NULL"></option> -->
+                <option value="1">Step 1</option>
+                <option value="2">Step 2</option>
+                <option value="3">Step 3</option>
+                <option value="4">Step 4</option>
+                <option value="5">Step 5</option>
+                <option value="6">Step 6</option>
+                <option value="7">Step 7</option>
+                <option value="8">Step 8</option>
+                <option value="9">Step 9</option>
+            </select>    
+        </div>
+    </form>
+    <hr>
+    <input class="form-submit" type="submit" onclick="processForm()" value="Smoosh It">
+            </form>
+    <p id="resultsblock" style="display: none">THIS ONE</p>
+    <p id="resultsblock2" style="display: none">THIS TOO</p>
+    <p id="resultsblock3" style="display: none">ALSO THIS</p>
+
+
+    <script type="text/javascript">
+        //as an onchange event
+    function showfields(val){
+        var array1= new Array("1", "2", "3", "4", "5", "6", "7", "8", "9");
+        if(array1.indexOf(val.value) !== -1)
+        {
+            document.getElementById('paygrade1').style.display-'block';
+            document.getElementById('paystep1').style.display-'block';
+            document.getElementById('paygrade2').style.display-'block';
+            document.getElementById('paystep2').style.display-'block';
+            document.getElementById("resultsblock").style.display-'block';
+            document.getElementById("resultsblock2").style.display-'block';
+            document.getElementById("resultsblock3").style.display-'block';
+        }
+    } 
+
+    function processForm(e){
+        var array1= new Array("1", "2", "3", "4", "5", "6", "7", "8", "9");
+        var answerdisplay = document.getElementById("resultsblock");
+        var answerdisplay2 = document.getElementById("resultsblock2");
+        var answerdisplay3 = document.getElementById("resultsblock3");
+        var pg1 = document.getElementById("paygrade1").value;
+        var pg2 = document.getElementById("paygrade2").value;
+        var ps1 = document.getElementById("paystep1").value;
+        var ps2 = document.getElementById("paystep2").value;
+        
+        var pr1;
+        var pr2;
+        
+        // set the stepX value for each step based on grade. "updates" variable named above
+        switch(pg1){
+            case "1": // pay grade 1 
+                switch(ps1){
+                    case "1": // step 1
+                        pr1=11.00
+                    break;
+                    case "2": // step 2
+                        pr1=12.00
+                    break;
+                    case "3": // you get the point
+                        pr1=13.00
+                    break;
+                    case "4":
+                        pr1=14.00
+                    break;
+                    case "5":
+                        pr1=15.00
+                    break;
+                    case "6":
+                        pr1=16.00
+                    break;
+                    case "7":
+                        pr1=17.00
+                    break;
+                    case "8":
+                        pr1=18.00
+                    break;
+                    case "9":
+                        pr1=19.00
+                    break;
+                }
+            case "2": // pay grade 2
+                switch(ps1){
+                    case "1": // step 1
+                        pr1=21.00
+                    break;
+                    case "2": // step 2
+                        pr1=22.00
+                    break;
+                    case "3": // you get the point
+                        pr1=23.00
+                    break;
+                    case "4":
+                        pr1=24.00
+                    break;
+                    case "5":
+                        pr1=25.00
+                    break;
+                    case "6":
+                        pr1=26.00
+                    break;
+                    case "7":
+                        pr1=27.00
+                    break;
+                    case "8":
+                        pr1=28.00
+                    break;
+                    case "9":
+                        pr1=29.00
+                    break;
+                }
+            case "3": // pay grade 3
+                switch(ps1){
+                    case "1": // step 1
+                        pr1=31.00
+                    break;
+                    case "2": // step 2
+                        pr1=32.00
+                    break;
+                    case "3": // you get the point
+                        pr1=33.00
+                    break;
+                    case "4":
+                        pr1=34.00
+                    break;
+                    case "5":
+                        pr1=35.00
+                    break;
+                    case "6":
+                        pr1=36.00
+                    break;
+                    case "7":
+                        pr1=37.00
+                    break;
+                    case "8":
+                        pr1=38.00
+                    break;
+                    case "9":
+                        pr1=39.00
+                    break;
+                }
+            case "4": // pay grade 4
+                switch(ps1){
+                    case "1": // step 1
+                        pr1=41.00
+                    break;
+                    case "2": // step 2
+                        pr1=42.00
+                    break;
+                    case "3": // you get the point
+                        pr1=43.00
+                    break;
+                    case "4":
+                        pr1=44.00
+                    break;
+                    case "5":
+                        pr1=45.00
+                    break;
+                    case "6":
+                        pr1=46.00
+                    break;
+                    case "7":
+                        pr1=47.00
+                    break;
+                    case "8":
+                        pr1=48.00
+                    break;
+                    case "9":
+                        pr1=49.00
+                    break;
+                }
+            case "5": // pay grade 5
+                switch(ps1){
+                    case "1": // step 1
+                        pr1=51.00
+                    break;
+                    case "2": // step 2
+                        pr1=52.00
+                    break;
+                    case "3": // you get the point
+                        pr1=53.00
+                    break;
+                    case "4":
+                        pr1=54.00
+                    break;
+                    case "5":
+                        pr1=55.00
+                    break;
+                    case "6":
+                        pr1=56.00
+                    break;
+                    case "7":
+                        pr1=57.00
+                    break;
+                    case "8":
+                        pr1=58.00
+                    break;
+                    case "9":
+                        pr1=59.00
+                    break;
+                }
+            case "6": // pay grade 6
+                switch(ps1){
+                    case "1": // step 1
+                        pr1=61.00
+                    break;
+                    case "2": // step 2
+                        pr1=62.00
+                    break;
+                    case "3": // you get the point
+                        pr1=63.00
+                    break;
+                    case "4":
+                        pr1=64.00
+                    break;
+                    case "5":
+                        pr1=65.00
+                    break;
+                    case "6":
+                        pr1=66.00
+                    break;
+                    case "7":
+                        pr1=67.00
+                    break;
+                    case "8":
+                        pr1=68.00
+                    break;
+                    case "9":
+                        pr1=69.00
+                    break;
+                }
+            case "7": // pay grade 7
+                switch(ps1){
+                    case "1": // step 1
+                        pr1=71.00
+                    break;
+                    case "2": // step 2
+                        pr1=72.00
+                    break;
+                    case "3": // you get the point
+                        pr1=73.00
+                    break;
+                    case "4":
+                        pr1=74.00
+                    break;
+                    case "5":
+                        pr1=75.00
+                    break;
+                    case "6":
+                        pr1=76.00
+                    break;
+                    case "7":
+                        pr1=77.00
+                    break;
+                    case "8":
+                        pr1=78.00
+                    break;
+                    case "9":
+                        pr1=79.00
+                    break;
+                }
+            case "8": // pay grade 8
+                switch(ps1){
+                    case "1": // step 1
+                        pr1=81.00
+                    break;
+                    case "2": // step 2
+                        pr1=82.00
+                    break;
+                    case "3": // you get the point
+                        pr1=83.00
+                    break;
+                    case "4":
+                        pr1=84.00
+                    break;
+                    case "5":
+                        pr1=85.00
+                    break;
+                    case "6":
+                        pr1=86.00
+                    break;
+                    case "7":
+                        pr1=87.00
+                    break;
+                    case "8":
+                        pr1=88.00
+                    break;
+                    case "9":
+                        pr1=89.00
+                    break;
+                }
+        }
+        // seeing this here I realize this wont work. need two sets of variables for each with dif names. 
+        // long comment because I am wrapping up for the day and want to remember what I was thinking
+
+        switch(pg2){
+            case "1": // pay grade 1 
+                switch(ps2){
+                    case "1": // step 1
+                        pr2=11.00
+                    break;
+                    case "2": // step 2
+                        pr2=12.00
+                    break;
+                    case "3": // you get the point
+                        pr2=13.00
+                    break;
+                    case "4":
+                        pr2=14.00
+                    break;
+                    case "5":
+                        pr2=15.00
+                    break;
+                    case "6":
+                        pr2=16.00
+                    break;
+                    case "7":
+                        pr2=17.00
+                    break;
+                    case "8":
+                        pr2=18.00
+                    break;
+                    case "9":
+                        pr2=19.00
+                    break;
+                }
+            case "2": // pay grade 2
+                switch(ps2){
+                    case "1": // step 1
+                        pr2=21.00
+                    break;
+                    case "2": // step 2
+                        pr2=22.00
+                    break;
+                    case "3": // you get the point
+                        pr2=23.00
+                    break;
+                    case "4":
+                        pr2=24.00
+                    break;
+                    case "5":
+                        pr2=25.00
+                    break;
+                    case "6":
+                        pr2=26.00
+                    break;
+                    case "7":
+                        pr2=27.00
+                    break;
+                    case "8":
+                        pr2=28.00
+                    break;
+                    case "9":
+                        pr2=29.00
+                    break;
+                }
+            case "3": // pay grade 3
+                switch(ps2){
+                    case "1": // step 1
+                        pr2=31.00
+                    break;
+                    case "2": // step 2
+                        pr2=32.00
+                    break;
+                    case "3": // you get the point
+                        pr2=33.00
+                    break;
+                    case "4":
+                        pr2=34.00
+                    break;
+                    case "5":
+                        pr2=35.00
+                    break;
+                    case "6":
+                        pr2=36.00
+                    break;
+                    case "7":
+                        pr2=37.00
+                    break;
+                    case "8":
+                        pr2=38.00
+                    break;
+                    case "9":
+                        pr2=39.00
+                    break;
+                }
+            case "4": // pay grade 4
+                switch(ps2){
+                    case "1": // step 1
+                        pr2=41.00
+                    break;
+                    case "2": // step 2
+                        pr2=42.00
+                    break;
+                    case "3": // you get the point
+                        pr2=43.00
+                    break;
+                    case "4":
+                        pr2=44.00
+                    break;
+                    case "5":
+                        pr2=45.00
+                    break;
+                    case "6":
+                        pr2=46.00
+                    break;
+                    case "7":
+                        pr2=47.00
+                    break;
+                    case "8":
+                        pr2=48.00
+                    break;
+                    case "9":
+                        pr2=49.00
+                    break;
+                }
+            case "5": // pay grade 5
+                switch(ps2){
+                    case "1": // step 1
+                        pr2=51.00
+                    break;
+                    case "2": // step 2
+                        pr2=52.00
+                    break;
+                    case "3": // you get the point
+                        pr2=53.00
+                    break;
+                    case "4":
+                        pr2=54.00
+                    break;
+                    case "5":
+                        pr2=55.00
+                    break;
+                    case "6":
+                        pr2=56.00
+                    break;
+                    case "7":
+                        pr2=57.00
+                    break;
+                    case "8":
+                        pr2=58.00
+                    break;
+                    case "9":
+                        pr2=59.00
+                    break;
+                }
+            case "6": // pay grade 6
+                switch(ps2){
+                    case "1": // step 1
+                        pr2=61.00
+                    break;
+                    case "2": // step 2
+                        pr2=62.00
+                    break;
+                    case "3": // you get the point
+                        pr2=63.00
+                    break;
+                    case "4":
+                        pr2=64.00
+                    break;
+                    case "5":
+                        pr2=65.00
+                    break;
+                    case "6":
+                        pr2=66.00
+                    break;
+                    case "7":
+                        pr2=67.00
+                    break;
+                    case "8":
+                        pr2=68.00
+                    break;
+                    case "9":
+                        pr2=69.00
+                    break;
+                }
+            case "7": // pay grade 7
+                switch(ps2){
+                    case "1": // step 1
+                        pr2=71.00
+                    break;
+                    case "2": // step 2
+                        pr2=72.00
+                    break;
+                    case "3": // you get the point
+                        pr2=73.00
+                    break;
+                    case "4":
+                        pr2=74.00
+                    break;
+                    case "5":
+                        pr2=75.00
+                    break;
+                    case "6":
+                        pr2=76.00
+                    break;
+                    case "7":
+                        pr2=77.00
+                    break;
+                    case "8":
+                        pr2=78.00
+                    break;
+                    case "9":
+                        pr2=79.00
+                    break;
+                }
+            case "8": // pay grade 8
+                switch(ps2){
+                    case "1": // step 1
+                        pr2=81.00
+                    break;
+                    case "2": // step 2
+                        pr2=82.00
+                    break;
+                    case "3": // you get the point
+                        pr2=83.00
+                    break;
+                    case "4":
+                        pr2=84.00
+                    break;
+                    case "5":
+                        pr2=85.00
+                    break;
+                    case "6":
+                        pr2=86.00
+                    break;
+                    case "7":
+                        pr2=87.00
+                    break;
+                    case "8":
+                        pr2=88.00
+                    break;
+                    case "9":
+                        pr2=89.00
+                    break;
+                }
+        }
+        // error alerts
+        if (pg1=="NULL") {
+            answerdisplay.innerHTML="Invalid First Pay Grade";
+            answerdisplay.className+="error";
+            answerdisplay.style.display="block";
+            
+        }
+        else if(ps1=="NULL") {
+            answerdisplay.innerHTML="Invalid First Pay Step";
+            answerdisplay.className+="error";
+            answerdisplay.style.display="block";
+        }
+        else if(pg2=="NULL") {
+            answerdisplay2.innerHTML="Invalid Second Pay Grade";
+            answerdisplay2.className+="error";
+            answerdisplay2.style.display="block";
+        }
+        else if(ps2=="NULL") {
+            answerdisplay2.innerHTML="Invalid Second Pay Step";
+            answerdisplay2.className+="error";
+            answerdisplay2.style.display="block";
+        }
+        else{
+        //    figure out how to do the math
+            
+            console.log(pr1);
+            console.log(pr2);
+    
+            var annualHours = 2080;
+    
+            var salary1= (pr1 * annualHours);
+            var salary2= (pr2 * annualHours);        
+
+            answerdisplay.innerHTML = "Estimated Salary 1: $" + salary1 + " at a pay rate of $" + pr1 + " /hour";
+            answerdisplay2.innerHTML = "Estimated Salary 2: $" + salary2 + " at a pay rate of $" + pr2 + " /hour";
+            var salaryDif = (salary2-salary1);
+            var hourlyDif = (pr2-pr1);
+            answerdisplay3.innerHTML = "The difference in salaries is: $" + (salaryDif) + " and an hourly difference of: $" + hourlyDif + " /hour";
+            
+            answerdisplay.style.display="block";
+            answerdisplay2.style.display="block";
+            answerdisplay3.style.display="block";
+            
+        }
+
+    }
+
+
+    </script>        
+</body>
+</html>
