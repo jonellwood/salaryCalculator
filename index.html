@@ -9,14 +9,9 @@
     <title>Document</title>
 </head>
 <body>
-    <div><h1>Welcome to Wynette Degroot Dot Com
-    
-    </h1>
-    </div>
-
+    <div><h1>Welcome to Wynette Degroot Dot Com</h1></div>
     <div id="main">
     <hr> 
-
     <!-- <form id="salaryCalculator" method="post" action="/home" onsubmit="return false"> -->
     <form id="salaryCalculator" method="post" action="/home" >
         <div id="selectHolder">
@@ -24,19 +19,19 @@
         <select id="paygrade1" class="form-select" onchange="showfields(this)">
         <!-- <select id="paygrade1" class="form-select"> -->
             <!-- <option value="NULL"></option> -->
-            <option value="A">Grade 1</option>
-            <option value="B">Grade 2</option>
-            <option value="C">Grade 3</option>
-            <option value="D">Grade 4</option>
-            <option value="E">Grade 5</option>
-            <option value="F">Grade 6</option>
-            <option value="G">Grade 7</option>
-            <option value="H">Grade 8</option>
-            <option value="I">Grade 9</option>
-            <option value="J">Grade 10</option>
-            <option value="K">Grade 11</option>
-            <option value="L">Grade 12</option>
-            <option value="M">Grade 13</option>
+            <option value="1">Grade 1</option>
+            <option value="2">Grade 2</option>
+            <option value="3">Grade 3</option>
+            <option value="4">Grade 4</option>
+            <option value="5">Grade 5</option>
+            <option value="6">Grade 6</option>
+            <option value="7">Grade 7</option>
+            <option value="8">Grade 8</option>
+            <option value="9">Grade 9</option>
+            <option value="10">Grade 10</option>
+            <option value="11">Grade 11</option>
+            <option value="12">Grade 12</option>
+            <option value="13">Grade 13</option>
         </select>
         </div>
         <div id="selectHolder">
@@ -66,19 +61,19 @@
         <select id="paygrade2" class="form-select" onchange="showfields(this)">
         <!-- <select id="paygrade2" class="form-select"> -->
             <!-- <option value="NULL"></option> -->
-            <option value="A">Grade 1</option>
-            <option value="B">Grade 2</option>
-            <option value="C">Grade 3</option>
-            <option value="D">Grade 4</option>
-            <option value="E">Grade 5</option>
-            <option value="F">Grade 6</option>
-            <option value="G">Grade 7</option>
-            <option value="H">Grade 8</option>
-            <option value="I">Grade 9</option>
-            <option value="J">Grade 10</option>
-            <option value="K">Grade 11</option>
-            <option value="L">Grade 12</option>
-            <option value="M">Grade 13</option>
+            <option value="1">Grade 1</option>
+            <option value="2">Grade 2</option>
+            <option value="3">Grade 3</option>
+            <option value="4">Grade 4</option>
+            <option value="5">Grade 5</option>
+            <option value="6">Grade 6</option>
+            <option value="7">Grade 7</option>
+            <option value="8">Grade 8</option>
+            <option value="9">Grade 9</option>
+            <option value="10">Grade 10</option>
+            <option value="11">Grade 11</option>
+            <option value="12">Grade 12</option>
+            <option value="13">Grade 13</option>
         </select>
         </div>
         <div id="selectHolder">
@@ -119,13 +114,13 @@
     <script type="text/javascript">
         //as an onchange event
     function showfields(val){
-        var array1= new Array("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M");
+        var array1= new Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13");
         if(array1.indexOf(val.value) !== -1)
         {
-            document.getElementById('paygrade1').style.display-'block';
-            document.getElementById('paystep1').style.display-'block';
-            document.getElementById('paygrade2').style.display-'block';
-            document.getElementById('paystep2').style.display-'block';
+            document.getElementById("paygrade1").style.display-'block';
+            document.getElementById("paystep1").style.display-'block';
+            document.getElementById("paygrade2").style.display-'block';
+            document.getElementById("paystep2").style.display-'block';
             document.getElementById("resultsblock").style.display-'block';
             document.getElementById("resultsblock2").style.display-'block';
             document.getElementById("resultsblock3").style.display-'block';
@@ -133,7 +128,7 @@
     } 
 
     function processForm(e){
-        var array1= new Array("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M");
+        var array1= new Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13");
         var answerdisplay = document.getElementById("resultsblock");
         var answerdisplay2 = document.getElementById("resultsblock2");
         var answerdisplay3 = document.getElementById("resultsblock3");
@@ -146,8 +141,9 @@
         var pr2;
         
         // set the stepX value for each step based on grade. "updates" variable named above
+        
         switch(pg1){
-            case "A": // pay grade 1 
+            case "1": // pay grade 1 
                 switch(ps1){
                     case "A": // step 1
                         pr1=14.28
@@ -189,7 +185,7 @@
                         pr1=18.11
                     break;
                 }
-            case "B": // pay grade 2
+            case "2": // pay grade 2
                 switch(ps1){
                     case "A": // step 1
                         pr1=14.54
@@ -231,7 +227,7 @@
                         pr1=18.43
                     break;
                 }
-            case "C": // pay grade 3
+            case "3": // pay grade 3
                 switch(ps1){
                     case "A": // step 1
                         pr1=14.96
@@ -273,7 +269,7 @@
                         pr1=18.96
                     break;
                 }
-            case "D": // pay grade 4
+            case "4": // pay grade 4
                 switch(ps1){
                     case "A": // step 1
                         pr1=15.94
@@ -315,7 +311,7 @@
                         pr1=20.21
                     break;
                 }
-            case "E": // pay grade 5
+            case "5": // pay grade 5
                 switch(ps1){
                     case "A": // step 1
                         pr1=17.16
@@ -357,7 +353,7 @@
                         pr1=21.76
                     break;
                 }
-            case "F": // pay grade 6
+            case "6": // pay grade 6
                 switch(ps1){
                     case "A": // step 1
                         pr1=17.90
@@ -399,7 +395,7 @@
                         pr1=22.70
                     break;
                 }
-            case "G": // pay grade 7
+            case "7": // pay grade 7
                 switch(ps1){
                     case "A": // step 1
                         pr1=18.63
@@ -441,7 +437,7 @@
                         pr1=23.63
                     break;
                 }
-            case "H": // pay grade 8
+            case "8": // pay grade 8
                 switch(ps1){
                     case "A": // step 1
                         pr1=19.84
@@ -483,7 +479,7 @@
                         pr1=25.16
                     break;
                 }
-            case "I": // pay grade 9
+            case "9": // pay grade 9
                 switch(ps1){
                     case "A": // step 1
                         pr1=20.83
@@ -525,7 +521,7 @@
                         pr1=26.41
                     break;
                 }
-            case "J": // pay grade 10
+            case "10": // pay grade 10
                 switch(ps1){
                     case "A": // step 1
                         pr1=23.31
@@ -567,7 +563,7 @@
                         pr1=29.55
                     break;
                 }
-            case "K": // pay grade 11
+            case "11": // pay grade 11
                 switch(ps1){
                     case "A": // step 1
                         pr1=25.78
@@ -609,7 +605,7 @@
                         pr1=32.96
                     break;
                 }
-            case "L": // pay grade 12
+            case "12": // pay grade 12
                 switch(ps1){
                     case "A": // step 1
                         pr1=30.74
@@ -651,7 +647,7 @@
                         pr1=38.97
                     break;
                 }
-            case "M": // pay grade 13
+            case "13": // pay grade 13
                 switch(ps1){
                     case "A": // step 1
                         pr1=33.54
@@ -698,7 +694,7 @@
         // long comment because I am wrapping up for the day and want to remember what I was thinking
 
         switch(pg2){
-            case "A": // pay grade 1 
+            case "1": // pay grade 1 
                 switch(ps2){
                     case "1": // step 1
                         pr2=14.28
@@ -740,7 +736,7 @@
                         pr2=18.11
                     break;
                 }
-            case "B": // pay grade 2
+            case "2": // pay grade 2
                 switch(ps2){
                     case "A": // step 1
                         pr2=14.54
@@ -782,7 +778,7 @@
                         pr2=18.43
                     break;
                 }
-            case "C": // pay grade 3
+            case "3": // pay grade 3
                 switch(ps2){
                     case "A": // step 1
                         pr2=14.96
@@ -824,7 +820,7 @@
                         pr2=18.96
                     break;
                 }
-            case "D": // pay grade 4
+            case "4": // pay grade 4
                 switch(ps2){
                     case "A": // step 1
                         pr2=15.94
@@ -866,7 +862,7 @@
                         pr2=20.21
                     break;
                 }
-            case "E": // pay grade 5
+            case "5": // pay grade 5
                 switch(ps2){
                     case "A": // step 1
                         pr2=17.16
@@ -908,7 +904,7 @@
                         pr2=21.76
                     break;
                 }
-            case "F": // pay grade 6
+            case "6": // pay grade 6
                 switch(ps2){
                     case "A": // step 1
                         pr2=17.90
@@ -950,7 +946,7 @@
                         pr2=22.70
                     break;
                 }
-            case "G": // pay grade 7
+            case "7": // pay grade 7
                 switch(ps2){
                     case "A": // step 1
                         pr2=18.63
@@ -992,7 +988,7 @@
                         pr2=23.63
                     break;
                 }
-            case "H": // pay grade 8
+            case "8": // pay grade 8
                 switch(ps2){
                     case "A": // step 1
                         pr2=19.84
@@ -1034,7 +1030,7 @@
                         pr2=25.16
                     break;
                 }
-            case "I": // pay grade 9
+            case "9": // pay grade 9
                 switch(ps2){
                     case "A": // step 1
                         pr2=20.83
@@ -1076,7 +1072,7 @@
                         pr2=26.41
                     break;
                 }
-            case "J": // pay grade 10
+            case "10": // pay grade 10
                 switch(ps2){
                     case "A": // step 1
                         pr2=23.31
@@ -1118,7 +1114,7 @@
                         pr2=29.55
                     break;
                 }
-            case "K": // pay grade 11
+            case "11": // pay grade 11
                 switch(ps2){
                     case "A": // step 1
                         pr2=25.78
@@ -1160,7 +1156,7 @@
                         pr2=32.96
                     break;
                 }
-            case "L": // pay grade 12
+            case "12": // pay grade 12
                 switch(ps2){
                     case "A": // step 1
                         pr2=30.74
@@ -1202,7 +1198,7 @@
                         pr2=38.97
                     break;
                 }
-            case "M": // pay grade 13
+            case "13": // pay grade 13
                 switch(ps2){
                     case "A": // step 1
                         pr2=33.54
@@ -1276,7 +1272,7 @@
             console.log("ps1 is: " + ps1);
             console.log("pg2 is: " + pg2);
             console.log("ps2 is: " + ps2);
-    
+            
             var annualHours = 2080;
     
             var salary1= (pr1 * annualHours).toFixed(2);
