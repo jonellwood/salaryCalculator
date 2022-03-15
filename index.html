@@ -1364,7 +1364,7 @@
             answerdisplay2.innerHTML = "Estimated Salary 2: $" + salary2 + " at a pay rate of $" + pr2 + " /hour";
             var salaryDif = (salary2-salary1);
             var hourlyDif = (pr2-pr1);
-            answerdisplay3.innerHTML = "The difference in salaries is: $" + (salaryDif) + " and an hourly difference of: $" + hourlyDif + " /hour";
+            answerdisplay3.innerHTML = "The difference in salaries is: $" + (salaryDif) + " and an hourly difference of: $" + hourlyDif.toFixed(2) + " /hour";
             
             answerdisplay.style.display="block";
             answerdisplay2.style.display="block";
