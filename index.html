@@ -57,7 +57,7 @@
                 <option value="11">Step 11</option>
                 <option value="12">Step 12</option>
                 <option value="13">Step 13</option>
-                <option value="14">Maximum</option>
+                <!-- <option value="14">Maximum</option> -->
             </select>    
         </div>
         <hr>
@@ -99,7 +99,7 @@
                 <option value="11">Step 11</option>
                 <option value="12">Step 12</option>
                 <option value="13">Step 13</option>
-                <option value="14">Maximum</option>
+                <!-- <option value="14">Maximum</option> -->
             </select>    
         </div>
     </form>
@@ -1348,13 +1348,17 @@
         else{
         //    figure out how to do the math
             
-            console.log(pr1);
-            console.log(pr2);
+            console.log("pr1 is: " + pr1);
+            console.log("pr2 is: " + pr2);
+            console.log("pg1 is: " + pg1);
+            console.log("ps1 is: " + ps1);
+            console.log("pg2 is: " + pg2);
+            console.log("ps2 is: " + ps2);
     
             var annualHours = 2080;
     
-            var salary1= (pr1 * annualHours);
-            var salary2= (pr2 * annualHours);        
+            var salary1= (pr1 * annualHours).toFixed(2);
+            var salary2= (pr2 * annualHours).toFixed(2);        
 
             answerdisplay.innerHTML = "Estimated Salary 1: $" + salary1 + " at a pay rate of $" + pr1 + " /hour";
             answerdisplay2.innerHTML = "Estimated Salary 2: $" + salary2 + " at a pay rate of $" + pr2 + " /hour";
