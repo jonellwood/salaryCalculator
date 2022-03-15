@@ -10,7 +10,7 @@
 </head>
 <body>
     <div><h1>Welcome to Wynette Degroot Dot Com
-    <img src="https://external-preview.redd.it/7_PNegGt98crnDZhmDD3udCjNLVAA5F0CasTv1uM1HQ.jpg?width=640&crop=smart&auto=webp&s=c151a6ec620edf0a3cac750dec33fb2748874309" height="100">
+    
     </h1>
     </div>
 
@@ -19,6 +19,7 @@
 
     <!-- <form id="salaryCalculator" method="post" action="/home" onsubmit="return false"> -->
     <form id="salaryCalculator" method="post" action="/home" >
+        <div id="selectHolder">
         <label for="paygrade1">Select First Pay Grade: </label>
         <!-- <select id="paygrade1" class="form-select" onchange="showfields(this)"> -->
         <select id="paygrade1" class="form-select">
@@ -37,7 +38,8 @@
             <option value="12">Grade 12</option>
             <option value="13">Grade 13</option>
         </select>
-        <div>
+        </div>
+        <div id="selectHolder">
             <label for="paystep1">Step Select First Pay Step:</label>
             <!-- <select id="paystep1" class="form-select" onchange="showfields(this)"> -->
             <select id="paystep1" class="form-select">
@@ -55,9 +57,11 @@
                 <option value="11">Step 11</option>
                 <option value="12">Step 12</option>
                 <option value="13">Step 13</option>
+                <option value="14">Maximum</option>
             </select>    
         </div>
         <hr>
+        <div id="selectHolder">
         <label for="paygrade2">Select Second Pay Grade: </label>
         <!-- <select id="paygrade2" class="form-select" onchange="showfields(this)"> -->
         <select id="paygrade2" class="form-select">
@@ -76,7 +80,8 @@
             <option value="12">Grade 12</option>
             <option value="13">Grade 13</option>
         </select>
-        <div>
+        </div>
+        <div id="selectHolder">
             <label for="paystep2">Select Second Pay Step:</label>
             <!-- <select id="paystep2" class="form-select" onchange="showfields(this)"> -->
             <select id="paystep2" class="form-select" >
@@ -94,12 +99,14 @@
                 <option value="11">Step 11</option>
                 <option value="12">Step 12</option>
                 <option value="13">Step 13</option>
+                <option value="14">Maximum</option>
             </select>    
         </div>
     </form>
     <hr>
     <input class="form-submit" type="submit" onclick="processForm()" value="Fire Up the Robots">
             </form>
+            
     <p id="resultsblock" style="display: none">THIS ONE</p>
     <p id="resultsblock2" style="display: none">THIS TOO</p>
     <p id="resultsblock3" style="display: none">ALSO THIS</p>
@@ -143,241 +150,586 @@
             case "1": // pay grade 1 
                 switch(ps1){
                     case "1": // step 1
-                        pr1=11.00
+                        pr1=14.28
                     break;
                     case "2": // step 2
-                        pr1=12.00
+                        pr1=14.71
                     break;
                     case "3": // you get the point
-                        pr1=13.00
+                        pr1=14.93
                     break;
                     case "4":
-                        pr1=14.00
+                        pr1=15.38
                     break;
                     case "5":
-                        pr1=15.00
+                        pr1=15.61
                     break;
                     case "6":
-                        pr1=16.00
+                        pr1=16.08
                     break;
                     case "7":
-                        pr1=17.00
+                        pr1=16.32
                     break;
                     case "8":
-                        pr1=18.00
+                        pr1=16.64
                     break;
                     case "9":
-                        pr1=19.00
+                        pr1=16.89
+                    break;
+                    case "10":
+                        pr1=17.23
+                    break;
+                    case "11":
+                        pr1=17.49
+                    break;
+                    case "12":
+                        pr1=17.84
+                    break;
+                    case "13":
+                        pr1=18.11
+                    break;
+                    case "14":
+                        pr1=18.47
                     break;
                 }
             case "2": // pay grade 2
                 switch(ps1){
                     case "1": // step 1
-                        pr1=21.00
+                        pr1=14.54
                     break;
                     case "2": // step 2
-                        pr1=22.00
+                        pr1=14.97
                     break;
                     case "3": // you get the point
-                        pr1=23.00
+                        pr1=15.20
                     break;
                     case "4":
-                        pr1=24.00
+                        pr1=15.65
                     break;
                     case "5":
-                        pr1=25.00
+                        pr1=15.89
                     break;
                     case "6":
-                        pr1=26.00
+                        pr1=16.36
                     break;
                     case "7":
-                        pr1=27.00
+                        pr1=16.61
                     break;
                     case "8":
-                        pr1=28.00
+                        pr1=16.94
                     break;
                     case "9":
-                        pr1=29.00
+                        pr1=17.19
+                    break;
+                    case "10":
+                        pr1=17.54
+                    break;
+                    case "11":
+                        pr1=17.80
+                    break;
+                    case "12":
+                        pr1=18.18
+                    break;
+                    case "13":
+                        pr1=18.43
+                    break;
+                    case "14":
+                        pr1=18.80
                     break;
                 }
             case "3": // pay grade 3
                 switch(ps1){
                     case "1": // step 1
-                        pr1=31.00
+                        pr1=14.96
                     break;
                     case "2": // step 2
-                        pr1=32.00
+                        pr1=15.41
                     break;
                     case "3": // you get the point
-                        pr1=33.00
+                        pr1=15.64
                     break;
                     case "4":
-                        pr1=34.00
+                        pr1=16.11
                     break;
                     case "5":
-                        pr1=35.00
+                        pr1=16.35
                     break;
                     case "6":
-                        pr1=36.00
+                        pr1=16.84
                     break;
                     case "7":
-                        pr1=37.00
+                        pr1=17.09
                     break;
                     case "8":
-                        pr1=38.00
+                        pr1=17.43
                     break;
                     case "9":
-                        pr1=39.00
+                        pr1=17.69
+                    break;
+                    case "10":
+                        pr1=18.05
+                    break;
+                    case "11":
+                        pr1=18.32
+                    break;
+                    case "12":
+                        pr1=18.68
+                    break;
+                    case "13":
+                        pr1=18.96
+                    break;
+                    case "14":
+                        pr1=19.34
                     break;
                 }
             case "4": // pay grade 4
                 switch(ps1){
                     case "1": // step 1
-                        pr1=41.00
+                        pr1=15.94
                     break;
                     case "2": // step 2
-                        pr1=42.00
+                        pr1=16.42
                     break;
                     case "3": // you get the point
-                        pr1=43.00
+                        pr1=16.66
                     break;
                     case "4":
-                        pr1=44.00
+                        pr1=17.16
                     break;
                     case "5":
-                        pr1=45.00
+                        pr1=17.42
                     break;
                     case "6":
-                        pr1=46.00
+                        pr1=17.94
                     break;
                     case "7":
-                        pr1=47.00
+                        pr1=18.21
                     break;
                     case "8":
-                        pr1=48.00
+                        pr1=18.58
                     break;
                     case "9":
-                        pr1=49.00
+                        pr1=18.85
+                    break;
+                    case "10":
+                        pr1=19.23
+                    break;
+                    case "11":
+                        pr1=19.52
+                    break;
+                    case "12":
+                        pr1=19.91
+                    break;
+                    case "13":
+                        pr1=20.21
+                    break;
+                    case "14":
+                        pr1=20.61
                     break;
                 }
             case "5": // pay grade 5
                 switch(ps1){
                     case "1": // step 1
-                        pr1=51.00
+                        pr1=17.16
                     break;
                     case "2": // step 2
-                        pr1=52.00
+                        pr1=17.68
                     break;
                     case "3": // you get the point
-                        pr1=53.00
+                        pr1=17.94
                     break;
                     case "4":
-                        pr1=54.00
+                        pr1=18.48
                     break;
                     case "5":
-                        pr1=55.00
+                        pr1=18.76
                     break;
                     case "6":
-                        pr1=56.00
+                        pr1=19.32
                     break;
                     case "7":
-                        pr1=57.00
+                        pr1=19.61
                     break;
                     case "8":
-                        pr1=58.00
+                        pr1=20.00
                     break;
                     case "9":
-                        pr1=59.00
+                        pr1=20.30
+                    break;
+                    case "10":
+                        pr1=20.71
+                    break;
+                    case "11":
+                        pr1=21.02
+                    break;
+                    case "12":
+                        pr1=21.44
+                    break;
+                    case "13":
+                        pr1=21.76
+                    break;
+                    case "14":
+                        pr1=22.20
                     break;
                 }
             case "6": // pay grade 6
                 switch(ps1){
                     case "1": // step 1
-                        pr1=61.00
+                        pr1=17.90
                     break;
                     case "2": // step 2
-                        pr1=62.00
+                        pr1=18.44
                     break;
                     case "3": // you get the point
-                        pr1=63.00
+                        pr1=18.71
                     break;
                     case "4":
-                        pr1=64.00
+                        pr1=19.27
                     break;
                     case "5":
-                        pr1=65.00
+                        pr1=19.56
                     break;
                     case "6":
-                        pr1=66.00
+                        pr1=20.15
                     break;
                     case "7":
-                        pr1=67.00
+                        pr1=20.45
                     break;
                     case "8":
-                        pr1=68.00
+                        pr1=20.86
                     break;
                     case "9":
-                        pr1=69.00
+                        pr1=21.17
+                    break;
+                    case "10":
+                        pr1=21.60
+                    break;
+                    case "11":
+                        pr1=21.92
+                    break;
+                    case "12":
+                        pr1=22.36
+                    break;
+                    case "13":
+                        pr1=22.70
+                    break;
+                    case "14":
+                        pr1=23.15
                     break;
                 }
             case "7": // pay grade 7
                 switch(ps1){
                     case "1": // step 1
-                        pr1=71.00
+                        pr1=18.63
                     break;
                     case "2": // step 2
-                        pr1=72.00
+                        pr1=19.19
                     break;
                     case "3": // you get the point
-                        pr1=73.00
+                        pr1=19.48
                     break;
                     case "4":
-                        pr1=74.00
+                        pr1=20.07
                     break;
                     case "5":
-                        pr1=75.00
+                        pr1=20.37
                     break;
                     case "6":
-                        pr1=76.00
+                        pr1=20.98
                     break;
                     case "7":
-                        pr1=77.00
+                        pr1=21.29
                     break;
                     case "8":
-                        pr1=78.00
+                        pr1=21.72
                     break;
                     case "9":
-                        pr1=79.00
+                        pr1=22.04
+                    break;
+                    case "10":
+                        pr1=22.49
+                    break;
+                    case "11":
+                        pr1=22.82
+                    break;
+                    case "12":
+                        pr1=23.28
+                    break;
+                    case "13":
+                        pr1=23.63
+                    break;
+                    case "14":
+                        pr1=24.10
                     break;
                 }
             case "8": // pay grade 8
                 switch(ps1){
                     case "1": // step 1
-                        pr1=81.00
+                        pr1=19.84
                     break;
                     case "2": // step 2
-                        pr1=82.00
+                        pr1=20.44
                     break;
                     case "3": // you get the point
-                        pr1=83.00
+                        pr1=20.74
                     break;
                     case "4":
-                        pr1=84.00
+                        pr1=21.37
                     break;
                     case "5":
-                        pr1=85.00
+                        pr1=21.69
                     break;
                     case "6":
-                        pr1=86.00
+                        pr1=22.34
                     break;
                     case "7":
-                        pr1=87.00
+                        pr1=22.67
                     break;
                     case "8":
-                        pr1=88.00
+                        pr1=23.12
                     break;
                     case "9":
-                        pr1=89.00
+                        pr1=23.47
+                    break;
+                    case "10":
+                        pr1=23.94
+                    break;
+                    case "11":
+                        pr1=24.30
+                    break;
+                    case "12":
+                        pr1=24.79
+                    break;
+                    case "13":
+                        pr1=25.16
+                    break;
+                    case "14":
+                        pr1=25.68
+                    break;
+                }
+            case "9": // pay grade 9
+                switch(ps1){
+                    case "1": // step 1
+                        pr1=20.83
+                    break;
+                    case "2": // step 2
+                        pr1=21.46
+                    break;
+                    case "3": // you get the point
+                        pr1=21.78
+                    break;
+                    case "4":
+                        pr1=22.43
+                    break;
+                    case "5":
+                        pr1=22.77
+                    break;
+                    case "6":
+                        pr1=23.45
+                    break;
+                    case "7":
+                        pr1=23.80
+                    break;
+                    case "8":
+                        pr1=24.28
+                    break;
+                    case "9":
+                        pr1=24.64
+                    break;
+                    case "10":
+                        pr1=25.14
+                    break;
+                    case "11":
+                        pr1=25.51
+                    break;
+                    case "12":
+                        pr1=26.02
+                    break;
+                    case "13":
+                        pr1=26.41
+                    break;
+                    case "14":
+                        pr1=26.94
+                    break;
+                }
+            case "10": // pay grade 10
+                switch(ps1){
+                    case "1": // step 1
+                        pr1=23.31
+                    break;
+                    case "2": // step 2
+                        pr1=24.01
+                    break;
+                    case "3": // you get the point
+                        pr1=24.37
+                    break;
+                    case "4":
+                        pr1=25.10
+                    break;
+                    case "5":
+                        pr1=25.47
+                    break;
+                    case "6":
+                        pr1=26.24
+                    break;
+                    case "7":
+                        pr1=26.63
+                    break;
+                    case "8":
+                        pr1=27.17
+                    break;
+                    case "9":
+                        pr1=27.57
+                    break;
+                    case "10":
+                        pr1=28.12
+                    break;
+                    case "11":
+                        pr1=28.55
+                    break;
+                    case "12":
+                        pr1=29.12
+                    break;
+                    case "13":
+                        pr1=29.55
+                    break;
+                    case "14":
+                        pr1=30.14
+                    break;
+                }
+            case "11": // pay grade 11
+                switch(ps1){
+                    case "1": // step 1
+                        pr1=25.78
+                    break;
+                    case "2": // step 2
+                        pr1=26.56
+                    break;
+                    case "3": // you get the point
+                        pr1=26.96
+                    break;
+                    case "4":
+                        pr1=27.77
+                    break;
+                    case "5":
+                        pr1=28.18
+                    break;
+                    case "6":
+                        pr1=29.03
+                    break;
+                    case "7":
+                        pr1=29.46
+                    break;
+                    case "8":
+                        pr1=30.05
+                    break;
+                    case "9":
+                        pr1=30.50
+                    break;
+                    case "10":
+                        pr1=31.11
+                    break;
+                    case "11":
+                        pr1=31.58
+                    break;
+                    case "12":
+                        pr1=32.21
+                    break;
+                    case "13":
+                        pr1=32.96
+                    break;
+                    case "14":
+                        pr1=33.35
+                    break;
+                }
+            case "12": // pay grade 12
+                switch(ps1){
+                    case "1": // step 1
+                        pr1=30.74
+                    break;
+                    case "2": // step 2
+                        pr1=31.66
+                    break;
+                    case "3": // you get the point
+                        pr1=32.13
+                    break;
+                    case "4":
+                        pr1=33.10
+                    break;
+                    case "5":
+                        pr1=33.59
+                    break;
+                    case "6":
+                        pr1=34.60
+                    break;
+                    case "7":
+                        pr1=35.12
+                    break;
+                    case "8":
+                        pr1=35.82
+                    break;
+                    case "9":
+                        pr1=36.36
+                    break;
+                    case "10":
+                        pr1=37.09
+                    break;
+                    case "11":
+                        pr1=37.65
+                    break;
+                    case "12":
+                        pr1=38.40
+                    break;
+                    case "13":
+                        pr1=38.97
+                    break;
+                    case "14":
+                        pr1=39.75
+                    break;
+                }
+            case "13": // pay grade 13
+                switch(ps1){
+                    case "1": // step 1
+                        pr1=33.54
+                    break;
+                    case "2": // step 2
+                        pr1=34.55
+                    break;
+                    case "3": // you get the point
+                        pr1=35.06
+                    break;
+                    case "4":
+                        pr1=36.12
+                    break;
+                    case "5":
+                        pr1=36.66
+                    break;
+                    case "6":
+                        pr1=37.76
+                    break;
+                    case "7":
+                        pr1=38.32
+                    break;
+                    case "8":
+                        pr1=39.09
+                    break;
+                    case "9":
+                        pr1=39.68
+                    break;
+                    case "10":
+                        pr1=40.47
+                    break;
+                    case "11":
+                        pr1=41.08
+                    break;
+                    case "12":
+                        pr1=41.90
+                    break;
+                    case "13":
+                        pr1=42.53
+                    break;
+                    case "14":
+                        pr1=43.38
                     break;
                 }
         }
@@ -388,241 +740,586 @@
             case "1": // pay grade 1 
                 switch(ps2){
                     case "1": // step 1
-                        pr2=11.00
+                        pr2=14.28
                     break;
                     case "2": // step 2
-                        pr2=12.00
+                        pr2=14.71
                     break;
                     case "3": // you get the point
-                        pr2=13.00
+                        pr2=14.93
                     break;
                     case "4":
-                        pr2=14.00
+                        pr2=15.38
                     break;
                     case "5":
-                        pr2=15.00
+                        pr2=15.61
                     break;
                     case "6":
-                        pr2=16.00
+                        pr2=16.08
                     break;
                     case "7":
-                        pr2=17.00
+                        pr2=16.32
                     break;
                     case "8":
-                        pr2=18.00
+                        pr2=16.64
                     break;
                     case "9":
-                        pr2=19.00
+                        pr2=16.89
+                    break;
+                    case "10":
+                        pr2=17.23
+                    break;
+                    case "11":
+                        pr2=17.49
+                    break;
+                    case "12":
+                        pr2=17.84
+                    break;
+                    case "13":
+                        pr2=18.11
+                    break;
+                    case "14":
+                        pr2=18.47
                     break;
                 }
             case "2": // pay grade 2
                 switch(ps2){
                     case "1": // step 1
-                        pr2=21.00
+                        pr2=14.54
                     break;
                     case "2": // step 2
-                        pr2=22.00
+                        pr2=14.97
                     break;
                     case "3": // you get the point
-                        pr2=23.00
+                        pr2=15.20
                     break;
                     case "4":
-                        pr2=24.00
+                        pr2=15.65
                     break;
                     case "5":
-                        pr2=25.00
+                        pr2=15.89
                     break;
                     case "6":
-                        pr2=26.00
+                        pr2=16.36
                     break;
                     case "7":
-                        pr2=27.00
+                        pr2=16.61
                     break;
                     case "8":
-                        pr2=28.00
+                        pr2=16.94
                     break;
                     case "9":
-                        pr2=29.00
+                        pr2=17.19
+                    break;
+                    case "10":
+                        pr2=17.54
+                    break;
+                    case "11":
+                        pr2=17.80
+                    break;
+                    case "12":
+                        pr2=18.18
+                    break;
+                    case "13":
+                        pr2=18.43
+                    break;
+                    case "14":
+                        pr2=18.80
                     break;
                 }
             case "3": // pay grade 3
                 switch(ps2){
                     case "1": // step 1
-                        pr2=31.00
+                        pr2=14.96
                     break;
                     case "2": // step 2
-                        pr2=32.00
+                        pr2=15.41
                     break;
                     case "3": // you get the point
-                        pr2=33.00
+                        pr2=15.64
                     break;
                     case "4":
-                        pr2=34.00
+                        pr2=16.11
                     break;
                     case "5":
-                        pr2=35.00
+                        pr2=16.35
                     break;
                     case "6":
-                        pr2=36.00
+                        pr2=16.84
                     break;
                     case "7":
-                        pr2=37.00
+                        pr2=17.09
                     break;
                     case "8":
-                        pr2=38.00
+                        pr2=17.43
                     break;
                     case "9":
-                        pr2=39.00
+                        pr2=17.69
+                    break;
+                    case "10":
+                        pr2=18.05
+                    break;
+                    case "11":
+                        pr2=18.32
+                    break;
+                    case "12":
+                        pr2=18.68
+                    break;
+                    case "13":
+                        pr2=18.96
+                    break;
+                    case "14":
+                        pr2=19.34
                     break;
                 }
             case "4": // pay grade 4
                 switch(ps2){
                     case "1": // step 1
-                        pr2=41.00
+                        pr2=15.94
                     break;
                     case "2": // step 2
-                        pr2=42.00
+                        pr2=16.42
                     break;
                     case "3": // you get the point
-                        pr2=43.00
+                        pr2=16.66
                     break;
                     case "4":
-                        pr2=44.00
+                        pr2=17.16
                     break;
                     case "5":
-                        pr2=45.00
+                        pr2=17.42
                     break;
                     case "6":
-                        pr2=46.00
+                        pr2=17.94
                     break;
                     case "7":
-                        pr2=47.00
+                        pr2=18.21
                     break;
                     case "8":
-                        pr2=48.00
+                        pr2=18.58
                     break;
                     case "9":
-                        pr2=49.00
+                        pr2=18.85
+                    break;
+                    case "10":
+                        pr2=19.23
+                    break;
+                    case "11":
+                        pr2=19.52
+                    break;
+                    case "12":
+                        pr2=19.91
+                    break;
+                    case "13":
+                        pr2=20.21
+                    break;
+                    case "14":
+                        pr2=20.61
                     break;
                 }
             case "5": // pay grade 5
                 switch(ps2){
                     case "1": // step 1
-                        pr2=51.00
+                        pr2=17.16
                     break;
                     case "2": // step 2
-                        pr2=52.00
+                        pr2=17.68
                     break;
                     case "3": // you get the point
-                        pr2=53.00
+                        pr2=17.94
                     break;
                     case "4":
-                        pr2=54.00
+                        pr2=18.48
                     break;
                     case "5":
-                        pr2=55.00
+                        pr2=18.76
                     break;
                     case "6":
-                        pr2=56.00
+                        pr2=19.32
                     break;
                     case "7":
-                        pr2=57.00
+                        pr2=19.61
                     break;
                     case "8":
-                        pr2=58.00
+                        pr2=20.00
                     break;
                     case "9":
-                        pr2=59.00
+                        pr2=20.30
+                    break;
+                    case "10":
+                        pr2=20.71
+                    break;
+                    case "11":
+                        pr2=21.02
+                    break;
+                    case "12":
+                        pr2=21.44
+                    break;
+                    case "13":
+                        pr2=21.76
+                    break;
+                    case "14":
+                        pr2=22.20
                     break;
                 }
             case "6": // pay grade 6
                 switch(ps2){
                     case "1": // step 1
-                        pr2=61.00
+                        pr2=17.90
                     break;
                     case "2": // step 2
-                        pr2=62.00
+                        pr2=18.44
                     break;
                     case "3": // you get the point
-                        pr2=63.00
+                        pr2=18.71
                     break;
                     case "4":
-                        pr2=64.00
+                        pr2=19.27
                     break;
                     case "5":
-                        pr2=65.00
+                        pr2=19.56
                     break;
                     case "6":
-                        pr2=66.00
+                        pr2=20.15
                     break;
                     case "7":
-                        pr2=67.00
+                        pr2=20.45
                     break;
                     case "8":
-                        pr2=68.00
+                        pr2=20.86
                     break;
                     case "9":
-                        pr2=69.00
+                        pr2=21.17
+                    break;
+                    case "10":
+                        pr2=21.60
+                    break;
+                    case "11":
+                        pr2=21.92
+                    break;
+                    case "12":
+                        pr2=22.36
+                    break;
+                    case "13":
+                        pr2=22.70
+                    break;
+                    case "14":
+                        pr2=23.15
                     break;
                 }
             case "7": // pay grade 7
                 switch(ps2){
                     case "1": // step 1
-                        pr2=71.00
+                        pr2=18.63
                     break;
                     case "2": // step 2
-                        pr2=72.00
+                        pr2=19.19
                     break;
                     case "3": // you get the point
-                        pr2=73.00
+                        pr2=19.48
                     break;
                     case "4":
-                        pr2=74.00
+                        pr2=20.07
                     break;
                     case "5":
-                        pr2=75.00
+                        pr2=20.37
                     break;
                     case "6":
-                        pr2=76.00
+                        pr2=20.98
                     break;
                     case "7":
-                        pr2=77.00
+                        pr2=21.29
                     break;
                     case "8":
-                        pr2=78.00
+                        pr2=21.72
                     break;
                     case "9":
-                        pr2=79.00
+                        pr2=22.04
+                    break;
+                    case "10":
+                        pr2=22.49
+                    break;
+                    case "11":
+                        pr2=22.82
+                    break;
+                    case "12":
+                        pr2=23.28
+                    break;
+                    case "13":
+                        pr2=23.63
+                    break;
+                    case "14":
+                        pr2=24.10
                     break;
                 }
             case "8": // pay grade 8
                 switch(ps2){
                     case "1": // step 1
-                        pr2=81.00
+                        pr2=19.84
                     break;
                     case "2": // step 2
-                        pr2=82.00
+                        pr2=20.44
                     break;
                     case "3": // you get the point
-                        pr2=83.00
+                        pr2=20.74
                     break;
                     case "4":
-                        pr2=84.00
+                        pr2=21.37
                     break;
                     case "5":
-                        pr2=85.00
+                        pr2=21.69
                     break;
                     case "6":
-                        pr2=86.00
+                        pr2=22.34
                     break;
                     case "7":
-                        pr2=87.00
+                        pr2=22.67
                     break;
                     case "8":
-                        pr2=88.00
+                        pr2=23.12
                     break;
                     case "9":
-                        pr2=89.00
+                        pr2=23.47
+                    break;
+                    case "10":
+                        pr2=23.94
+                    break;
+                    case "11":
+                        pr2=24.30
+                    break;
+                    case "12":
+                        pr2=24.79
+                    break;
+                    case "13":
+                        pr2=25.16
+                    break;
+                    case "14":
+                        pr2=25.68
+                    break;
+                }
+            case "9": // pay grade 9
+                switch(ps2){
+                    case "1": // step 1
+                        pr2=20.83
+                    break;
+                    case "2": // step 2
+                        pr2=21.46
+                    break;
+                    case "3": // you get the point
+                        pr2=21.78
+                    break;
+                    case "4":
+                        pr2=22.43
+                    break;
+                    case "5":
+                        pr2=22.77
+                    break;
+                    case "6":
+                        pr2=23.45
+                    break;
+                    case "7":
+                        pr2=23.80
+                    break;
+                    case "8":
+                        pr2=24.28
+                    break;
+                    case "9":
+                        pr2=24.64
+                    break;
+                    case "10":
+                        pr2=25.14
+                    break;
+                    case "11":
+                        pr2=25.51
+                    break;
+                    case "12":
+                        pr2=26.02
+                    break;
+                    case "13":
+                        pr2=26.41
+                    break;
+                    case "14":
+                        pr2=26.94
+                    break;
+                }
+            case "10": // pay grade 10
+                switch(ps2){
+                    case "1": // step 1
+                        pr2=23.31
+                    break;
+                    case "2": // step 2
+                        pr2=24.01
+                    break;
+                    case "3": // you get the point
+                        pr2=24.37
+                    break;
+                    case "4":
+                        pr2=25.10
+                    break;
+                    case "5":
+                        pr2=25.47
+                    break;
+                    case "6":
+                        pr2=26.24
+                    break;
+                    case "7":
+                        pr2=26.63
+                    break;
+                    case "8":
+                        pr2=27.17
+                    break;
+                    case "9":
+                        pr2=27.57
+                    break;
+                    case "10":
+                        pr2=28.12
+                    break;
+                    case "11":
+                        pr2=28.55
+                    break;
+                    case "12":
+                        pr2=29.12
+                    break;
+                    case "13":
+                        pr2=29.55
+                    break;
+                    case "14":
+                        pr2=30.14
+                    break;
+                }
+            case "11": // pay grade 11
+                switch(ps2){
+                    case "1": // step 1
+                        pr2=25.78
+                    break;
+                    case "2": // step 2
+                        pr2=26.56
+                    break;
+                    case "3": // you get the point
+                        pr2=26.96
+                    break;
+                    case "4":
+                        pr2=27.77
+                    break;
+                    case "5":
+                        pr2=28.18
+                    break;
+                    case "6":
+                        pr2=29.03
+                    break;
+                    case "7":
+                        pr2=29.46
+                    break;
+                    case "8":
+                        pr2=30.05
+                    break;
+                    case "9":
+                        pr2=30.50
+                    break;
+                    case "10":
+                        pr2=31.11
+                    break;
+                    case "11":
+                        pr2=31.58
+                    break;
+                    case "12":
+                        pr2=32.21
+                    break;
+                    case "13":
+                        pr2=32.96
+                    break;
+                    case "14":
+                        pr2=33.35
+                    break;
+                }
+            case "12": // pay grade 12
+                switch(ps2){
+                    case "1": // step 1
+                        pr2=30.74
+                    break;
+                    case "2": // step 2
+                        pr2=31.66
+                    break;
+                    case "3": // you get the point
+                        pr2=32.13
+                    break;
+                    case "4":
+                        pr2=33.10
+                    break;
+                    case "5":
+                        pr2=33.59
+                    break;
+                    case "6":
+                        pr2=34.60
+                    break;
+                    case "7":
+                        pr2=35.12
+                    break;
+                    case "8":
+                        pr2=35.82
+                    break;
+                    case "9":
+                        pr2=36.36
+                    break;
+                    case "10":
+                        pr2=37.09
+                    break;
+                    case "11":
+                        pr2=37.65
+                    break;
+                    case "12":
+                        pr2=38.40
+                    break;
+                    case "13":
+                        pr2=38.97
+                    break;
+                    case "14":
+                        pr2=39.75
+                    break;
+                }
+            case "13": // pay grade 13
+                switch(ps2){
+                    case "1": // step 1
+                        pr2=33.54
+                    break;
+                    case "2": // step 2
+                        pr2=34.55
+                    break;
+                    case "3": // you get the point
+                        pr2=35.06
+                    break;
+                    case "4":
+                        pr2=36.12
+                    break;
+                    case "5":
+                        pr2=36.66
+                    break;
+                    case "6":
+                        pr2=37.76
+                    break;
+                    case "7":
+                        pr2=38.32
+                    break;
+                    case "8":
+                        pr2=39.09
+                    break;
+                    case "9":
+                        pr2=39.68
+                    break;
+                    case "10":
+                        pr2=40.47
+                    break;
+                    case "11":
+                        pr2=41.08
+                    break;
+                    case "12":
+                        pr2=41.90
+                    break;
+                    case "13":
+                        pr2=42.53
+                    break;
+                    case "14":
+                        pr2=43.38
                     break;
                 }
         }
