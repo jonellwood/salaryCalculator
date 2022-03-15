@@ -11,10 +11,19 @@ h1{
     text-align: center;
 }
 #main{
+    text-align: center;
     color: aliceblue;
 }
 
 .error{
     font-size: larger;
     color: red;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    color: aliceblue;
+    font-size: small;
+    text-align: center;
 }
