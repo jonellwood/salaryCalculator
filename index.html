@@ -114,7 +114,7 @@
     <script type="text/javascript">
         //as an onchange event
     function showfields(val){
-        var array1= new Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
+        var array1= new Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13");
         if(array1.indexOf(val.value) !== -1)
         {
             document.getElementById("paygrade1").style.display-'block';
@@ -128,7 +128,7 @@
     } 
 
     function processForm(e){
-        var array1= new Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
+        var array1= new Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13");
         var answerdisplay = document.getElementById("resultsblock");
         var answerdisplay2 = document.getElementById("resultsblock2");
         var answerdisplay3 = document.getElementById("resultsblock3");
@@ -141,1112 +141,2161 @@
         var pr2;
         
         // set the stepX value for each step based on grade. "updates" variable named above
-        
-        switch(pg1){
-            case "1": // pay grade 1 
-                switch(ps1){
-                    case "A": // step 1
-                        pr1=14.28
-                    break;
-                    case "B": // step 2
-                        pr1=14.71
-                    break;
-                    case "C": // you get the point
-                        pr1=14.93
-                    break;
-                    case "D":
-                        pr1=15.38
-                    break;
-                    case "E":
-                        pr1=15.61
-                    break;
-                    case "F":
-                        pr1=16.08
-                    break;
-                    case "G":
-                        pr1=16.32
-                    break;
-                    case "H":
-                        pr1=16.64
-                    break;
-                    case "I":
-                        pr1=16.89
-                    break;
-                    case "J":
-                        pr1=17.23
-                    break;
-                    case "K":
-                        pr1=17.49
-                    break;
-                    case "L":
-                        pr1=17.84
-                    break;
-                    case "M":
-                        pr1=18.11
-                    break;
-                }
-            case "2": // pay grade 2
-                switch(ps1){
-                    case "A": // step 1
-                        pr1=14.54
-                    break;
-                    case "B": // step 2
-                        pr1=14.97
-                    break;
-                    case "C": // you get the point
-                        pr1=15.20
-                    break;
-                    case "D":
-                        pr1=15.65
-                    break;
-                    case "E":
-                        pr1=15.89
-                    break;
-                    case "F":
-                        pr1=16.36
-                    break;
-                    case "G":
-                        pr1=16.61
-                    break;
-                    case "H":
-                        pr1=16.94
-                    break;
-                    case "I":
-                        pr1=17.19
-                    break;
-                    case "J":
-                        pr1=17.54
-                    break;
-                    case "K":
-                        pr1=17.80
-                    break;
-                    case "L":
-                        pr1=18.18
-                    break;
-                    case "M":
-                        pr1=18.43
-                    break;
-                }
-            case "3": // pay grade 3
-                switch(ps1){
-                    case "A": // step 1
-                        pr1=14.96
-                    break;
-                    case "B": // step 2
-                        pr1=15.41
-                    break;
-                    case "C": // you get the point
-                        pr1=15.64
-                    break;
-                    case "D":
-                        pr1=16.11
-                    break;
-                    case "E":
-                        pr1=16.35
-                    break;
-                    case "F":
-                        pr1=16.84
-                    break;
-                    case "G":
-                        pr1=17.09
-                    break;
-                    case "H":
-                        pr1=17.43
-                    break;
-                    case "I":
-                        pr1=17.69
-                    break;
-                    case "J":
-                        pr1=18.05
-                    break;
-                    case "K":
-                        pr1=18.32
-                    break;
-                    case "L":
-                        pr1=18.68
-                    break;
-                    case "M":
-                        pr1=18.96
-                    break;
-                }
-            case "4": // pay grade 4
-                switch(ps1){
-                    case "A": // step 1
-                        pr1=15.94
-                    break;
-                    case "B": // step 2
-                        pr1=16.42
-                    break;
-                    case "C": // you get the point
-                        pr1=16.66
-                    break;
-                    case "D":
-                        pr1=17.16
-                    break;
-                    case "E":
-                        pr1=17.42
-                    break;
-                    case "F":
-                        pr1=17.94
-                    break;
-                    case "G":
-                        pr1=18.21
-                    break;
-                    case "H":
-                        pr1=18.58
-                    break;
-                    case "I":
-                        pr1=18.85
-                    break;
-                    case "J":
-                        pr1=19.23
-                    break;
-                    case "K":
-                        pr1=19.52
-                    break;
-                    case "L":
-                        pr1=19.91
-                    break;
-                    case "M":
-                        pr1=20.21
-                    break;
-                }
-            case "5": // pay grade 5
-                switch(ps1){
-                    case "A": // step 1
-                        pr1=17.16
-                    break;
-                    case "B": // step 2
-                        pr1=17.68
-                    break;
-                    case "C": // you get the point
-                        pr1=17.94
-                    break;
-                    case "D":
-                        pr1=18.48
-                    break;
-                    case "E":
-                        pr1=18.76
-                    break;
-                    case "F":
-                        pr1=19.32
-                    break;
-                    case "G":
-                        pr1=19.61
-                    break;
-                    case "H":
-                        pr1=20.00
-                    break;
-                    case "I":
-                        pr1=20.30
-                    break;
-                    case "J":
-                        pr1=20.71
-                    break;
-                    case "K":
-                        pr1=21.02
-                    break;
-                    case "L":
-                        pr1=21.44
-                    break;
-                    case "M":
-                        pr1=21.76
-                    break;
-                }
-            case "6": // pay grade 6
-                switch(ps1){
-                    case "A": // step 1
-                        pr1=17.90
-                    break;
-                    case "B": // step 2
-                        pr1=18.44
-                    break;
-                    case "C": // you get the point
-                        pr1=18.71
-                    break;
-                    case "D":
-                        pr1=19.27
-                    break;
-                    case "E":
-                        pr1=19.56
-                    break;
-                    case "F":
-                        pr1=20.15
-                    break;
-                    case "G":
-                        pr1=20.45
-                    break;
-                    case "H":
-                        pr1=20.86
-                    break;
-                    case "I":
-                        pr1=21.17
-                    break;
-                    case "J":
-                        pr1=21.60
-                    break;
-                    case "K":
-                        pr1=21.92
-                    break;
-                    case "L":
-                        pr1=22.36
-                    break;
-                    case "M":
-                        pr1=22.70
-                    break;
-                }
-            case "7": // pay grade 7
-                switch(ps1){
-                    case "A": // step 1
-                        pr1=18.63
-                    break;
-                    case "B": // step 2
-                        pr1=19.19
-                    break;
-                    case "C": // you get the point
-                        pr1=19.48
-                    break;
-                    case "D":
-                        pr1=20.07
-                    break;
-                    case "E":
-                        pr1=20.37
-                    break;
-                    case "F":
-                        pr1=20.98
-                    break;
-                    case "G":
-                        pr1=21.29
-                    break;
-                    case "H":
-                        pr1=21.72
-                    break;
-                    case "I":
-                        pr1=22.04
-                    break;
-                    case "J":
-                        pr1=22.49
-                    break;
-                    case "K":
-                        pr1=22.82
-                    break;
-                    case "L":
-                        pr1=23.28
-                    break;
-                    case "M":
-                        pr1=23.63
-                    break;
-                }
-            case "8": // pay grade 8
-                switch(ps1){
-                    case "A": // step 1
-                        pr1=19.84
-                    break;
-                    case "B": // step 2
-                        pr1=20.44
-                    break;
-                    case "C": // you get the point
-                        pr1=20.74
-                    break;
-                    case "D":
-                        pr1=21.37
-                    break;
-                    case "E":
-                        pr1=21.69
-                    break;
-                    case "F":
-                        pr1=22.34
-                    break;
-                    case "G":
-                        pr1=22.67
-                    break;
-                    case "H":
-                        pr1=23.12
-                    break;
-                    case "I":
-                        pr1=23.47
-                    break;
-                    case "J":
-                        pr1=23.94
-                    break;
-                    case "K":
-                        pr1=24.30
-                    break;
-                    case "L":
-                        pr1=24.79
-                    break;
-                    case "M":
-                        pr1=25.16
-                    break;
-                }
-            case "9": // pay grade 9
-                switch(ps1){
-                    case "A": // step 1
-                        pr1=20.83
-                    break;
-                    case "B": // step 2
-                        pr1=21.46
-                    break;
-                    case "C": // you get the point
-                        pr1=21.78
-                    break;
-                    case "D":
-                        pr1=22.43
-                    break;
-                    case "E":
-                        pr1=22.77
-                    break;
-                    case "F":
-                        pr1=23.45
-                    break;
-                    case "G":
-                        pr1=23.80
-                    break;
-                    case "H":
-                        pr1=24.28
-                    break;
-                    case "I":
-                        pr1=24.64
-                    break;
-                    case "J":
-                        pr1=25.14
-                    break;
-                    case "K1":
-                        pr1=25.51
-                    break;
-                    case "L":
-                        pr1=26.02
-                    break;
-                    case "M":
-                        pr1=26.41
-                    break;
-                }
-            case "10": // pay grade 10
-                switch(ps1){
-                    case "A": // step 1
-                        pr1=23.31
-                    break;
-                    case "B": // step 2
-                        pr1=24.01
-                    break;
-                    case "C": // you get the point
-                        pr1=24.37
-                    break;
-                    case "D":
-                        pr1=25.10
-                    break;
-                    case "E":
-                        pr1=25.47
-                    break;
-                    case "F":
-                        pr1=26.24
-                    break;
-                    case "G":
-                        pr1=26.63
-                    break;
-                    case "H":
-                        pr1=27.17
-                    break;
-                    case "I":
-                        pr1=27.57
-                    break;
-                    case "J":
-                        pr1=28.12
-                    break;
-                    case "K":
-                        pr1=28.55
-                    break;
-                    case "L":
-                        pr1=29.12
-                    break;
-                    case "M":
-                        pr1=29.55
-                    break;
-                }
-            case "11": // pay grade 11
-                switch(ps1){
-                    case "A": // step 1
-                        pr1=25.78
-                    break;
-                    case "B": // step 2
-                        pr1=26.56
-                    break;
-                    case "C": // you get the point
-                        pr1=26.96
-                    break;
-                    case "D":
-                        pr1=27.77
-                    break;
-                    case "E":
-                        pr1=28.18
-                    break;
-                    case "F":
-                        pr1=29.03
-                    break;
-                    case "G":
-                        pr1=29.46
-                    break;
-                    case "H":
-                        pr1=30.05
-                    break;
-                    case "I":
-                        pr1=30.50
-                    break;
-                    case "J":
-                        pr1=31.11
-                    break;
-                    case "K":
-                        pr1=31.58
-                    break;
-                    case "L":
-                        pr1=32.21
-                    break;
-                    case "M":
-                        pr1=32.96
-                    break;
-                }
-            case "12": // pay grade 12
-                switch(ps1){
-                    case "A": // step 1
-                        pr1=30.74
-                    break;
-                    case "B": // step 2
-                        pr1=31.66
-                    break;
-                    case "C": // you get the point
-                        pr1=32.13
-                    break;
-                    case "D":
-                        pr1=33.10
-                    break;
-                    case "E":
-                        pr1=33.59
-                    break;
-                    case "F":
-                        pr1=34.60
-                    break;
-                    case "G":
-                        pr1=35.12
-                    break;
-                    case "H":
-                        pr1=35.82
-                    break;
-                    case "I":
-                        pr1=36.36
-                    break;
-                    case "J":
-                        pr1=37.09
-                    break;
-                    case "K":
-                        pr1=37.65
-                    break;
-                    case "L":
-                        pr1=38.40
-                    break;
-                    case "M":
-                        pr1=38.97
-                    break;
-                }
-            case "13": // pay grade 13
-                switch(ps1){
-                    case "A": // step 1
-                        pr1=33.54
-                    break;
-                    case "B": // step 2
-                        pr1=34.55
-                    break;
-                    case "C": // you get the point
-                        pr1=35.06
-                    break;
-                    case "D":
-                        pr1=36.12
-                    break;
-                    case "E":
-                        pr1=36.66
-                    break;
-                    case "F":
-                        pr1=37.76
-                    break;
-                    case "G":
-                        pr1=38.32
-                    break;
-                    case "H":
-                        pr1=39.09
-                    break;
-                    case "I":
-                        pr1=39.68
-                    break;
-                    case "J":
-                        pr1=40.47
-                    break;
-                    case "K":
-                        pr1=41.08
-                    break;
-                    case "L":
-                        pr1=41.90
-                    break;
-                    case "M":
-                        pr1=42.53
-                    break;
-                    default:
-                    console.log("You are too dumb to code. Give it Up");
-                }
-                
+        switch (true) {
+            case ((pg1 === "1") && (ps1 === "A")):
+                pr1=14.28;
+                break;
+            case ((pg1 === "1") && (ps1 === "B")):
+                pr1=14.71;
+                break;
+            case ((pg1 === "1") && (ps1 === "C")):
+                pr1=14.93;
+                break;
+            case ((pg1 === "1") && (ps1 === "D")):
+                pr1=15.38;
+                break;
+            case ((pg1 === "1") && (ps1 === "E")):
+                pr1=15.61;
+                break;
+            case ((pg1 === "1") && (ps1 === "F")):
+                pr1=16.08;
+                break;
+            case ((pg1 === "1") && (ps1 === "G")):
+                pr1=16.32;
+                break;
+            case ((pg1 === "1") && (ps1 === "H")):
+                pr1=16.64;
+                break;
+            case ((pg1 === "1") && (ps1 === "I")):
+                pr1=16.89;
+                break;
+            case ((pg1 === "1") && (ps1 === "J")):
+                pr1=17.32;
+                break;
+            case ((pg1 === "1") && (ps1 === "K")):
+                pr1=17.49;
+                break;
+            case ((pg1 === "1") && (ps1 === "L")):
+                pr1=17.84;
+                break;
+            case ((pg1 === "1") && (ps1 === "M")):
+                pr1=18.11;
+                break;
+                // start pay grade 2
+            case ((pg1 === "2") && (ps1 === "A")):
+                pr1=14.54;
+                break;
+            case ((pg1 === "2") && (ps1 === "B")):
+                pr1=14.97;
+                break;
+            case ((pg1 === "2") && (ps1 === "C")):
+                pr1=15.20;
+                break;
+            case ((pg1 === "2") && (ps1 === "D")):
+                pr1=15.65;
+                break;
+            case ((pg1 === "2") && (ps1 === "E")):
+                pr1=15.89;
+                break;
+            case ((pg1 === "2") && (ps1 === "F")):
+                pr1=16.36;
+                break;
+            case ((pg1 === "2") && (ps1 === "G")):
+                pr1=16.61;
+                break;
+            case ((pg1 === "2") && (ps1 === "H")):
+                pr1=16.94;
+                break;
+            case ((pg1 === "2") && (ps1 === "I")):
+                pr1=17.19;
+                break;
+            case ((pg1 === "2") && (ps1 === "J")):
+                pr1=17.54;
+                break;
+            case ((pg1 === "2") && (ps1 === "K")):
+                pr1=17.80;
+                break;
+            case ((pg1 === "2") && (ps1 === "L")):
+                pr1=18.18;
+                break;
+            case ((pg1 === "2") && (ps1 === "M")):
+                pr1=18.43;
+                break;
+                // start pay grade 3
+            case ((pg1 === "3") && (ps1 === "A")):
+                pr1=14.96;
+                break;
+            case ((pg1 === "3") && (ps1 === "B")):
+                pr1=15.41;
+                break;
+            case ((pg1 === "3") && (ps1 === "C")):
+                pr1=15.64;
+                break;
+            case ((pg1 === "3") && (ps1 === "D")):
+                pr1=16.11;
+                break;
+            case ((pg1 === "3") && (ps1 === "E")):
+                pr1=16.35;
+                break;
+            case ((pg1 === "3") && (ps1 === "F")):
+                pr1=16.84;
+                break;
+            case ((pg1 === "3") && (ps1 === "G")):
+                pr1=17.09;
+                break;
+            case ((pg1 === "3") && (ps1 === "H")):
+                pr1=17.43;
+                break;
+            case ((pg1 === "3") && (ps1 === "I")):
+                pr1=17.69;
+                break;
+            case ((pg1 === "3") && (ps1 === "J")):
+                pr1=18.05;
+                break;
+            case ((pg1 === "3") && (ps1 === "K")):
+                pr1=18.32;
+                break;
+            case ((pg1 === "3") && (ps1 === "L")):
+                pr1=18.68;
+                break;
+            case ((pg1 === "3") && (ps1 === "M")):
+                pr1=18.96;
+                break;
+                //start paygrade 4
+            case ((pg1 === "4") && (ps1 === "A")):
+                pr1=15.94;
+                break;
+            case ((pg1 === "4") && (ps1 === "B")):
+                pr1=16.42;
+                break;
+            case ((pg1 === "4") && (ps1 === "C")):
+                pr1=16.66;
+                break;
+            case ((pg1 === "4") && (ps1 === "D")):
+                pr1=17.16;
+                break;
+            case ((pg1 === "4") && (ps1 === "E")):
+                pr1=17.42;
+                break;
+            case ((pg1 === "4") && (ps1 === "F")):
+                pr1=17.94;
+                break;
+            case ((pg1 === "4") && (ps1 === "G")):
+                pr1=18.21;
+                break;
+            case ((pg1 === "4") && (ps1 === "H")):
+                pr1=18.58;
+                break;
+            case ((pg1 === "4") && (ps1 === "I")):
+                pr1=18.85;
+                break;
+            case ((pg1 === "4") && (ps1 === "J")):
+                pr1=19.23;
+                break;
+            case ((pg1 === "4") && (ps1 === "K")):
+                pr1=19.52;
+                break;
+            case ((pg1 === "4") && (ps1 === "L")):
+                pr1=19.91;
+                break;
+            case ((pg1 === "4") && (ps1 === "M")):
+                pr1=20.21;
+                break;
+                // start paygrade 5
+            case ((pg1 === "5") && (ps1 === "A")):
+                pr1=17.16;
+                break;
+            case ((pg1 === "5") && (ps1 === "B")):
+                pr1=17.68;
+                break;
+            case ((pg1 === "5") && (ps1 === "C")):
+                pr1=17.94;
+                break;
+            case ((pg1 === "5") && (ps1 === "D")):
+                pr1=18.48;
+                break;
+            case ((pg1 === "5") && (ps1 === "E")):
+                pr1=18.76;
+                break;
+            case ((pg1 === "5") && (ps1 === "F")):
+                pr1=19.32;
+                break;
+            case ((pg1 === "5") && (ps1 === "G")):
+                pr1=19.61;
+                break;
+            case ((pg1 === "5") && (ps1 === "H")):
+                pr1=20.00;
+                break;
+            case ((pg1 === "5") && (ps1 === "I")):
+                pr1=20.30;
+                break;
+            case ((pg1 === "5") && (ps1 === "J")):
+                pr1=20.71;
+                break;
+            case ((pg1 === "5") && (ps1 === "K")):
+                pr1=21.02;
+                break;
+            case ((pg1 === "5") && (ps1 === "L")):
+                pr1=21.44;
+                break;
+            case ((pg1 === "5") && (ps1 === "M")):
+                pr1=21.76;
+                break;
+                // start paygrade 6
+            case ((pg1 === "6") && (ps1 === "A")):
+                pr1=17.90
+                break;
+            case ((pg1 === "6") && (ps1 === "B")):
+                pr1=18.44
+                break;
+            case ((pg1 === "6") && (ps1 === "C")):
+                pr1=18.71
+                break;
+            case ((pg1 === "6") && (ps1 === "D")):
+                pr1=19.27
+                break;
+            case ((pg1 === "6") && (ps1 === "E")):
+                pr1=19.56
+                break;
+            case ((pg1 === "6") && (ps1 === "F")):
+                pr1=20.15
+                break;
+            case ((pg1 === "6") && (ps1 === "G")):
+                pr1=20.45
+                break;
+            case ((pg1 === "6") && (ps1 === "H")):
+                pr1=20.86
+                break;
+            case ((pg1 === "6") && (ps1 === "I")):
+                pr1=21.17
+                break;
+            case ((pg1 === "6") && (ps1 === "J")):
+                pr1=21.60
+                break;
+            case ((pg1 === "6") && (ps1 === "K")):
+                pr1=21.92
+                break;
+            case ((pg1 === "6") && (ps1 === "L")):
+                pr1=22.36
+                break;
+            case ((pg1 === "6") && (ps1 === "M")):
+                pr1=22.70
+                break;
+                //start paygrade 7
+            case ((pg1 === "7") && (ps1 === "A")):
+                pr1=18.63
+                break;
+            case ((pg1 === "7") && (ps1 === "B")):
+                pr1=19.19
+                break;
+            case ((pg1 === "7") && (ps1 === "C")):
+                pr1=19.48
+                break;
+            case ((pg1 === "7") && (ps1 === "D")):
+                pr1=20.07
+                break;
+            case ((pg1 === "7") && (ps1 === "E")):
+                pr1=20.37
+                break;
+            case ((pg1 === "7") && (ps1 === "F")):
+                pr1=20.98
+                break;
+            case ((pg1 === "7") && (ps1 === "G")):
+                pr1=21.29
+                break;
+            case ((pg1 === "7") && (ps1 === "H")):
+                pr1=21.72
+                break;
+            case ((pg1 === "7") && (ps1 === "I")):
+                pr1=22.04
+                break;
+            case ((pg1 === "7") && (ps1 === "J")):
+                pr1=22.49
+                break;
+            case ((pg1 === "7") && (ps1 === "K")):
+                pr1=22.82
+                break;
+            case ((pg1 === "7") && (ps1 === "L")):
+                pr1=23.28
+                break;
+            case ((pg1 === "7") && (ps1 === "M")):
+                pr1=23.63
+                break;
+                //start paygrade 8 
+            case ((pg1 === "8") && (ps1 === "A")):
+                pr1=19.84
+                break;
+            case ((pg1 === "8") && (ps1 === "B")):
+                pr1=20.44
+                break;
+            case ((pg1 === "8") && (ps1 === "C")):
+                pr1=20.74
+                break;
+            case ((pg1 === "8") && (ps1 === "D")):
+                pr1=21.37
+                break;
+            case ((pg1 === "8") && (ps1 === "E")):
+                pr1=21.69
+                break;
+            case ((pg1 === "8") && (ps1 === "F")):
+                pr1=22.34
+                break;
+            case ((pg1 === "8") && (ps1 === "G")):
+                pr1=22.67
+                break;
+            case ((pg1 === "8") && (ps1 === "H")):
+                pr1=23.12
+                break;
+            case ((pg1 === "8") && (ps1 === "I")):
+                pr1=23.47
+                break;
+            case ((pg1 === "8") && (ps1 === "J")):
+                pr1=23.94
+                break;
+            case ((pg1 === "8") && (ps1 === "K")):
+                pr1=24.30
+                break;
+            case ((pg1 === "8") && (ps1 === "L")):
+                pr1=24.79
+                break;
+            case ((pg1 === "8") && (ps1 === "M")):
+                pr1=25.16
+                break;
+                //start paygrade 9
+            case ((pg1 === "9") && (ps1 === "A")):
+                pr1=20.83
+                break;
+            case ((pg1 === "9") && (ps1 === "B")):
+                pr1=21.46
+                break;
+            case ((pg1 === "9") && (ps1 === "C")):
+                pr1=21.78
+                break;
+            case ((pg1 === "9") && (ps1 === "D")):
+                pr1=22.43
+                break;
+            case ((pg1 === "9") && (ps1 === "E")):
+                pr1=22.77
+                break;
+            case ((pg1 === "9") && (ps1 === "F")):
+                pr1=23.45
+                break;
+            case ((pg1 === "9") && (ps1 === "G")):
+                pr1=23.80
+                break;
+            case ((pg1 === "9") && (ps1 === "H")):
+                pr1=24.28
+                break;
+            case ((pg1 === "9") && (ps1 === "I")):
+                pr1=24.64
+                break;
+            case ((pg1 === "9") && (ps1 === "J")):
+                pr1=24.15
+                break;
+            case ((pg1 === "9") && (ps1 === "K")):
+                pr1=25.51
+                break;
+            case ((pg1 === "9") && (ps1 === "L")):
+                pr1=26.02
+                break;
+            case ((pg1 === "9") && (ps1 === "M")):
+                pr1=26.41
+                break;
+                //start paygrade 10
+            case ((pg1 === "10") && (ps1 === "A")):
+                pr1=23.31
+                break;
+            case ((pg1 === "10") && (ps1 === "B")):
+                pr1=24.01
+                break;
+            case ((pg1 === "10") && (ps1 === "C")):
+                pr1=24.37
+                break;
+            case ((pg1 === "10") && (ps1 === "D")):
+                pr1=25.10
+                break;
+            case ((pg1 === "10") && (ps1 === "E")):
+                pr1=25.47
+                break;
+            case ((pg1 === "10") && (ps1 === "F")):
+                pr1=26.24
+                break;
+            case ((pg1 === "10") && (ps1 === "G")):
+                pr1=26.63
+                break;
+            case ((pg1 === "10") && (ps1 === "H")):
+                pr1=27.17
+                break;
+            case ((pg1 === "10") && (ps1 === "I")):
+                pr1=27.57
+                break;
+            case ((pg1 === "10") && (ps1 === "J")):
+                pr1=28.12
+                break;
+            case ((pg1 === "10") && (ps1 === "K")):
+                pr1=28.55
+                break;
+            case ((pg1 === "10") && (ps1 === "L")):
+                pr1=29.12
+                break;
+            case ((pg1 === "10") && (ps1 === "M")):
+                pr1=29.55
+                break;
+                //start paygrade 11 
+            case ((pg1 === "11") && (ps1 === "A")):
+                pr1=25.78
+                break;
+            case ((pg1 === "11") && (ps1 === "B")):
+                pr1=26.56
+                break;
+            case ((pg1 === "11") && (ps1 === "C")):
+                pr1=26.96
+                break;
+            case ((pg1 === "11") && (ps1 === "D")):
+                pr1=27.77
+                break;
+            case ((pg1 === "11") && (ps1 === "E")):
+                pr1=28.18
+                break;
+            case ((pg1 === "11") && (ps1 === "F")):
+                pr1=29.03
+                break;
+            case ((pg1 === "11") && (ps1 === "G")):
+                pr1=29.46
+                break;
+            case ((pg1 === "11") && (ps1 === "H")):
+                pr1=30.05
+                break;
+            case ((pg1 === "11") && (ps1 === "I")):
+                pr1=30.50
+                break;
+            case ((pg1 === "11") && (ps1 === "J")):
+                pr1=31.11
+                break;
+            case ((pg1 === "11") && (ps1 === "K")):
+                pr1=31.58
+                break;
+            case ((pg1 === "11") && (ps1 === "L")):
+                pr1=32.21
+                break;
+            case ((pg1 === "11") && (ps1 === "M")):
+                pr1=32.96
+                break;
+                // start paygrade 12
+            case ((pg1 === "12") && (ps1 === "A")):
+                pr1=30.74
+                break;
+            case ((pg1 === "12") && (ps1 === "B")):
+                pr1=31.66
+                break;
+            case ((pg1 === "12") && (ps1 === "C")):
+                pr1=32.13
+                break;
+            case ((pg1 === "12") && (ps1 === "D")):
+                pr1=33.10
+                break;
+            case ((pg1 === "12") && (ps1 === "E")):
+                pr1=33.59
+                break;
+            case ((pg1 === "12") && (ps1 === "F")):
+                pr1=34.60
+                break;
+            case ((pg1 === "12") && (ps1 === "G")):
+                pr1=35.12
+                break;
+            case ((pg1 === "12") && (ps1 === "H")):
+                pr1=35.82
+                break;
+            case ((pg1 === "12") && (ps1 === "I")):
+                pr1=36.36
+                break;
+            case ((pg1 === "12") && (ps1 === "J")):
+                pr1=37.09
+                break;
+            case ((pg1 === "12") && (ps1 === "K")):
+                pr1=37.65
+                break;
+            case ((pg1 === "12") && (ps1 === "L")):
+                pr1=38.40
+                break;
+            case ((pg1 === "12") && (ps1 === "M")):
+                pr1=38.97
+                break;
+                // start paygrade 13
+            case ((pg1 === "13") && (ps1 === "A")):
+                pr1=33.54
+                break;
+            case ((pg1 === "13") && (ps1 === "B")):
+                pr1=34.55
+                break;
+            case ((pg1 === "13") && (ps1 === "C")):
+                pr1=35.06
+                break;
+            case ((pg1 === "13") && (ps1 === "D")):
+                pr1=36.12
+                break;
+            case ((pg1 === "13") && (ps1 === "E")):
+                pr1=36.66
+                break;
+            case ((pg1 === "13") && (ps1 === "F")):
+                pr1=37.76
+                break;
+            case ((pg1 === "13") && (ps1 === "G")):
+                pr1=38.32
+                break;
+            case ((pg1 === "13") && (ps1 === "H")):
+                pr1=39.09
+                break;
+            case ((pg1 === "13") && (ps1 === "I")):
+                pr1=39.68
+                break;
+            case ((pg1 === "13") && (ps1 === "J")):
+                pr1=40.47
+                break;
+            case ((pg1 === "13") && (ps1 === "K")):
+                pr1=41.08
+                break;
+            case ((pg1 === "13") && (ps1 === "L")):
+                pr1=41.90
+                break;
+            case ((pg1 === "13") && (ps1 === "M")):
+                pr1=42.53
+                break;
         }
+        // options for Second salary
+        // if code breaks after finding the first match then any code after it is not run???
+        // meaning I need a second and distinct switch for the ps2??
+
+         switch(true){
+            case ((pg2 === "1") && (ps2 === "A")):
+                pr2=14.28;
+                break;
+            case ((pg2 === "1") && (ps2 === "B")):
+                pr2=14.71;
+                break;
+            case ((pg2 === "1") && (ps2 === "C")):
+                pr2=14.93;
+                break;
+            case ((pg2 === "1") && (ps2 === "D")):
+                pr2=15.38;
+                break;
+            case ((pg2 === "1") && (ps2 === "E")):
+                pr2=15.61;
+                break;
+            case ((pg2 === "1") && (ps2 === "F")):
+                pr2=16.08;
+                break;
+            case ((pg2 === "1") && (ps2 === "G")):
+                pr2=16.32;
+                break;
+            case ((pg2 === "1") && (ps2 === "H")):
+                pr2=16.64;
+                break;
+            case ((pg2 === "1") && (ps2 === "I")):
+                pr2=16.89;
+                break;
+            case ((pg2 === "1") && (ps2 === "J")):
+                pr2=17.32;
+                break;
+            case ((pg2 === "1") && (ps2 === "K")):
+                pr2=17.49;
+                break;
+            case ((pg2 === "1") && (ps2 === "L")):
+                pr2=17.84;
+                break;
+            case ((pg2 === "1") && (ps2 === "M")):
+                pr2=18.11;
+                break;
+                // start pay grade 2
+            case ((pg2 === "2") && (ps2 === "A")):
+                pr2=14.54;
+                break;
+            case ((pg2 === "2") && (ps2 === "B")):
+                pr2=14.97;
+                break;
+            case ((pg2 === "2") && (ps2 === "C")):
+                pr2=15.20;
+                break;
+            case ((pg2 === "2") && (ps2 === "D")):
+                pr2=15.65;
+                break;
+            case ((pg2 === "2") && (ps2 === "E")):
+                pr2=15.89;
+                break;
+            case ((pg2 === "2") && (ps2 === "F")):
+                pr2=16.36;
+                break;
+            case ((pg2 === "2") && (ps2 === "G")):
+                pr2=16.61;
+                break;
+            case ((pg2 === "2") && (ps2 === "H")):
+                pr2=16.94;
+                break;
+            case ((pg2 === "2") && (ps2 === "I")):
+                pr2=17.19;
+                break;
+            case ((pg2 === "2") && (ps2 === "J")):
+                pr2=17.54;
+                break;
+            case ((pg2 === "2") && (ps2 === "K")):
+                pr2=17.80;
+                break;
+            case ((pg2 === "2") && (ps2 === "L")):
+                pr2=18.18;
+                break;
+            case ((pg2 === "2") && (ps2 === "M")):
+                pr2=18.43;
+                break;
+                // start pay grade 3
+            case ((pg2 === "3") && (ps2 === "A")):
+                pr2=14.96;
+                break;
+            case ((pg2 === "3") && (ps2 === "B")):
+                pr2=15.41;
+                break;
+            case ((pg2 === "3") && (ps2 === "C")):
+                pr2=15.64;
+                break;
+            case ((pg2 === "3") && (ps2 === "D")):
+                pr2=16.11;
+                break;
+            case ((pg2 === "3") && (ps2 === "E")):
+                pr2=16.35;
+                break;
+            case ((pg2 === "3") && (ps2 === "F")):
+                pr2=16.84;
+                break;
+            case ((pg2 === "3") && (ps2 === "G")):
+                pr2=17.09;
+                break;
+            case ((pg2 === "3") && (ps2 === "H")):
+                pr2=17.43;
+                break;
+            case ((pg2 === "3") && (ps2 === "I")):
+                pr2=17.69;
+                break;
+            case ((pg2 === "3") && (ps2 === "J")):
+                pr2=18.05;
+                break;
+            case ((pg2 === "3") && (ps2 === "K")):
+                pr2=18.32;
+                break;
+            case ((pg2 === "3") && (ps2 === "L")):
+                pr2=18.68;
+                break;
+            case ((pg2 === "3") && (ps2 === "M")):
+                pr2=18.96;
+                break;
+                //start paygrade 4
+            case ((pg2 === "4") && (ps2 === "A")):
+                pr2=15.94;
+                break;
+            case ((pg2 === "4") && (ps2 === "B")):
+                pr2=16.42;
+                break;
+            case ((pg2 === "4") && (ps2 === "C")):
+                pr2=16.66;
+                break;
+            case ((pg2 === "4") && (ps2 === "D")):
+                pr2=17.16;
+                break;
+            case ((pg2 === "4") && (ps2 === "E")):
+                pr2=17.42;
+                break;
+            case ((pg2 === "4") && (ps2 === "F")):
+                pr2=17.94;
+                break;
+            case ((pg2 === "4") && (ps2 === "G")):
+                pr2=18.21;
+                break;
+            case ((pg2 === "4") && (ps2 === "H")):
+                pr2=18.58;
+                break;
+            case ((pg2 === "4") && (ps2 === "I")):
+                pr2=18.85;
+                break;
+            case ((pg2 === "4") && (ps2 === "J")):
+                pr2=19.23;
+                break;
+            case ((pg2 === "4") && (ps2 === "K")):
+                pr2=19.52;
+                break;
+            case ((pg2 === "4") && (ps2 === "L")):
+                pr2=19.91;
+                break;
+            case ((pg2 === "4") && (ps2 === "M")):
+                pr2=20.21;
+                break;
+                // start paygrade 5
+            case ((pg2 === "5") && (ps2 === "A")):
+                pr2=17.16;
+                break;
+            case ((pg2 === "5") && (ps2 === "B")):
+                pr2=17.68;
+                break;
+            case ((pg2 === "5") && (ps2 === "C")):
+                pr2=17.94;
+                break;
+            case ((pg2 === "5") && (ps2 === "D")):
+                pr2=18.48;
+                break;
+            case ((pg2 === "5") && (ps2 === "E")):
+                pr2=18.76;
+                break;
+            case ((pg2 === "5") && (ps2 === "F")):
+                pr2=19.32;
+                break;
+            case ((pg2 === "5") && (ps2 === "G")):
+                pr2=19.61;
+                break;
+            case ((pg2 === "5") && (ps2 === "H")):
+                pr2=20.00;
+                break;
+            case ((pg2 === "5") && (ps2 === "I")):
+                pr2=20.30;
+                break;
+            case ((pg2 === "5") && (ps2 === "J")):
+                pr2=20.71;
+                break;
+            case ((pg2 === "5") && (ps2 === "K")):
+                pr2=21.02;
+                break;
+            case ((pg2 === "5") && (ps2 === "L")):
+                pr2=21.44;
+                break;
+            case ((pg2 === "5") && (ps2 === "M")):
+                pr2=21.76;
+                break;
+                // start paygrade 6
+            case ((pg2 === "6") && (ps2 === "A")):
+                pr2=17.90
+                break;
+            case ((pg2 === "6") && (ps2 === "B")):
+                pr2=18.44
+                break;
+            case ((pg2 === "6") && (ps2 === "C")):
+                pr2=18.71
+                break;
+            case ((pg2 === "6") && (ps2 === "D")):
+                pr2=19.27
+                break;
+            case ((pg2 === "6") && (ps2 === "E")):
+                pr2=19.56
+                break;
+            case ((pg2 === "6") && (ps2 === "F")):
+                pr2=20.15
+                break;
+            case ((pg2 === "6") && (ps2 === "G")):
+                pr2=20.45
+                break;
+            case ((pg2 === "6") && (ps2 === "H")):
+                pr2=20.86
+                break;
+            case ((pg2 === "6") && (ps2 === "I")):
+                pr2=21.17
+                break;
+            case ((pg2 === "6") && (ps2 === "J")):
+                pr2=21.60
+                break;
+            case ((pg2 === "6") && (ps2 === "K")):
+                pr2=21.92
+                break;
+            case ((pg2 === "6") && (ps2 === "L")):
+                pr2=22.36
+                break;
+            case ((pg2 === "6") && (ps2 === "M")):
+                pr2=22.70
+                break;
+                //start paygrade 7
+            case ((pg2 === "7") && (ps2 === "A")):
+                pr2=18.63
+                break;
+            case ((pg2 === "7") && (ps2 === "B")):
+                pr2=19.19
+                break;
+            case ((pg2 === "7") && (ps2 === "C")):
+                pr2=19.48
+                break;
+            case ((pg2 === "7") && (ps2 === "D")):
+                pr2=20.07
+                break;
+            case ((pg2 === "7") && (ps2 === "E")):
+                pr2=20.37
+                break;
+            case ((pg2 === "7") && (ps2 === "F")):
+                pr2=20.98
+                break;
+            case ((pg2 === "7") && (ps2 === "G")):
+                pr2=21.29
+                break;
+            case ((pg2 === "7") && (ps2 === "H")):
+                pr2=21.72
+                break;
+            case ((pg2 === "7") && (ps2 === "I")):
+                pr2=22.04
+                break;
+            case ((pg2 === "7") && (ps2 === "J")):
+                pr2=22.49
+                break;
+            case ((pg2 === "7") && (ps2 === "K")):
+                pr2=22.82
+                break;
+            case ((pg2 === "7") && (ps2 === "L")):
+                pr2=23.28
+                break;
+            case ((pg2 === "7") && (ps2 === "M")):
+                pr2=23.63
+                break;
+                //start paygrade 8 
+            case ((pg2 === "8") && (ps2 === "A")):
+                pr2=19.84
+                break;
+            case ((pg2 === "8") && (ps2 === "B")):
+                pr2=20.44
+                break;
+            case ((pg2 === "8") && (ps2 === "C")):
+                pr2=20.74
+                break;
+            case ((pg2 === "8") && (ps2 === "D")):
+                pr2=21.37
+                break;
+            case ((pg2 === "8") && (ps2 === "E")):
+                pr2=21.69
+                break;
+            case ((pg2 === "8") && (ps2 === "F")):
+                pr2=22.34
+                break;
+            case ((pg2 === "8") && (ps2 === "G")):
+                pr2=22.67
+                break;
+            case ((pg2 === "8") && (ps2 === "H")):
+                pr2=23.12
+                break;
+            case ((pg2 === "8") && (ps2 === "I")):
+                pr2=23.47
+                break;
+            case ((pg2 === "8") && (ps2 === "J")):
+                pr2=23.94
+                break;
+            case ((pg2 === "8") && (ps2 === "K")):
+                pr2=24.30
+                break;
+            case ((pg2 === "8") && (ps2 === "L")):
+                pr2=24.79
+                break;
+            case ((pg2 === "8") && (ps2 === "M")):
+                pr2=25.16
+                break;
+                //start paygrade 9
+            case ((pg2 === "9") && (ps2 === "A")):
+                pr2=20.83
+                break;
+            case ((pg2 === "9") && (ps2 === "B")):
+                pr2=21.46
+                break;
+            case ((pg2 === "9") && (ps2 === "C")):
+                pr2=21.78
+                break;
+            case ((pg2 === "9") && (ps2 === "D")):
+                pr2=22.43
+                break;
+            case ((pg2 === "9") && (ps2 === "E")):
+                pr2=22.77
+                break;
+            case ((pg2 === "9") && (ps2 === "F")):
+                pr2=23.45
+                break;
+            case ((pg2 === "9") && (ps2 === "G")):
+                pr2=23.80
+                break;
+            case ((pg2 === "9") && (ps2 === "H")):
+                pr2=24.28
+                break;
+            case ((pg2 === "9") && (ps2 === "I")):
+                pr2=24.64
+                break;
+            case ((pg2 === "9") && (ps2 === "J")):
+                pr2=24.15
+                break;
+            case ((pg2 === "9") && (ps2 === "K")):
+                pr2=25.51
+                break;
+            case ((pg2 === "9") && (ps2 === "L")):
+                pr2=26.02
+                break;
+            case ((pg2 === "9") && (ps2 === "M")):
+                pr2=26.41
+                break;
+                //start paygrade 10
+            case ((pg2 === "10") && (ps2 === "A")):
+                pr2=23.31
+                break;
+            case ((pg2 === "10") && (ps2 === "B")):
+                pr2=24.01
+                break;
+            case ((pg2 === "10") && (ps2 === "C")):
+                pr2=24.37
+                break;
+            case ((pg2 === "10") && (ps2 === "D")):
+                pr2=25.10
+                break;
+            case ((pg2 === "10") && (ps2 === "E")):
+                pr2=25.47
+                break;
+            case ((pg2 === "10") && (ps2 === "F")):
+                pr2=26.24
+                break;
+            case ((pg2 === "10") && (ps2 === "G")):
+                pr2=26.63
+                break;
+            case ((pg2 === "10") && (ps2 === "H")):
+                pr2=27.17
+                break;
+            case ((pg2 === "10") && (ps2 === "I")):
+                pr2=27.57
+                break;
+            case ((pg2 === "10") && (ps2 === "J")):
+                pr2=28.12
+                break;
+            case ((pg2 === "10") && (ps2 === "K")):
+                pr2=28.55
+                break;
+            case ((pg2 === "10") && (ps2 === "L")):
+                pr2=29.12
+                break;
+            case ((pg2 === "10") && (ps2 === "M")):
+                pr2=29.55
+                break;
+                //start paygrade 11 
+            case ((pg2 === "11") && (ps2 === "A")):
+                pr2=25.78
+                break;
+            case ((pg2 === "11") && (ps2 === "B")):
+                pr2=26.56
+                break;
+            case ((pg2 === "11") && (ps2 === "C")):
+                pr2=26.96
+                break;
+            case ((pg2 === "11") && (ps2 === "D")):
+                pr2=27.77
+                break;
+            case ((pg2 === "11") && (ps2 === "E")):
+                pr2=28.18
+                break;
+            case ((pg2 === "11") && (ps2 === "F")):
+                pr2=29.03
+                break;
+            case ((pg2 === "11") && (ps2 === "G")):
+                pr2=29.46
+                break;
+            case ((pg2 === "11") && (ps2 === "H")):
+                pr2=30.05
+                break;
+            case ((pg2 === "11") && (ps2 === "I")):
+                pr2=30.50
+                break;
+            case ((pg2 === "11") && (ps2 === "J")):
+                pr2=31.11
+                break;
+            case ((pg2 === "11") && (ps2 === "K")):
+                pr2=31.58
+                break;
+            case ((pg2 === "11") && (ps2 === "L")):
+                pr2=32.21
+                break;
+            case ((pg2 === "11") && (ps2 === "M")):
+                pr2=32.96
+                break;
+                // start paygrade 12
+            case ((pg2 === "12") && (ps2 === "A")):
+                pr2=30.74
+                break;
+            case ((pg2 === "12") && (ps2 === "B")):
+                pr2=31.66
+                break;
+            case ((pg2 === "12") && (ps2 === "C")):
+                pr2=32.13
+                break;
+            case ((pg2 === "12") && (ps2 === "D")):
+                pr2=33.10
+                break;
+            case ((pg2 === "12") && (ps2 === "E")):
+                pr2=33.59
+                break;
+            case ((pg2 === "12") && (ps2 === "F")):
+                pr2=34.60
+                break;
+            case ((pg2 === "12") && (ps2 === "G")):
+                pr2=35.12
+                break;
+            case ((pg2 === "12") && (ps2 === "H")):
+                pr2=35.82
+                break;
+            case ((pg2 === "12") && (ps2 === "I")):
+                pr2=36.36
+                break;
+            case ((pg2 === "12") && (ps2 === "J")):
+                pr2=37.09
+                break;
+            case ((pg2 === "12") && (ps2 === "K")):
+                pr2=37.65
+                break;
+            case ((pg2 === "12") && (ps2 === "L")):
+                pr2=38.40
+                break;
+            case ((pg2 === "12") && (ps2 === "M")):
+                pr2=38.97
+                break;
+                // start paygrade 13
+            case ((pg2 === "13") && (ps2 === "A")):
+                pr2=33.54
+                break;
+            case ((pg2 === "13") && (ps2 === "B")):
+                pr2=34.55
+                break;
+            case ((pg2 === "13") && (ps2 === "C")):
+                pr2=35.06
+                break;
+            case ((pg2 === "13") && (ps2 === "D")):
+                pr2=36.12
+                break;
+            case ((pg2 === "13") && (ps2 === "E")):
+                pr2=36.66
+                break;
+            case ((pg2 === "13") && (ps2 === "F")):
+                pr2=37.76
+                break;
+            case ((pg2 === "13") && (ps2 === "G")):
+                pr2=38.32
+                break;
+            case ((pg2 === "13") && (ps2 === "H")):
+                pr2=39.09
+                break;
+            case ((pg2 === "13") && (ps2 === "I")):
+                pr2=39.68
+                break;
+            case ((pg2 === "13") && (ps2 === "J")):
+                pr2=40.47
+                break;
+            case ((pg2 === "13") && (ps2 === "K")):
+                pr2=41.08
+                break;
+            case ((pg2 === "13") && (ps2 === "L")):
+                pr2=41.90
+                break;
+            case ((pg2 === "13") && (ps2 === "M")):
+                pr2=42.53
+                break;
+                
+            }
+        
+
+
+        // switch(pg1){
+        //     case "1": // pay grade 1 
+        //         switch(ps1){
+        //             case "A": // step 1
+        //                 pr1=14.28
+        //             break;
+        //             case "B": // step 2
+        //                 pr1=14.71
+        //             break;
+        //             case "C": // you get the point
+        //                 pr1=14.93
+        //             break;
+        //             case "D":
+        //                 pr1=15.38
+        //             break;
+        //             case "E":
+        //                 pr1=15.61
+        //             break;
+        //             case "F":
+        //                 pr1=16.08
+        //             break;
+        //             case "G":
+        //                 pr1=16.32
+        //             break;
+        //             case "H":
+        //                 pr1=16.64
+        //             break;
+        //             case "I":
+        //                 pr1=16.89
+        //             break;
+        //             case "J":
+        //                 pr1=17.23
+        //             break;
+        //             case "K":
+        //                 pr1=17.49
+        //             break;
+        //             case "L":
+        //                 pr1=17.84
+        //             break;
+        //             case "M":
+        //                 pr1=18.11
+        //             break;
+        //         }
+        //     case "2": // pay grade 2
+        //         switch(ps1){
+        //             case "A": // step 1
+        //                 pr1=14.54
+        //             break;
+        //             case "B": // step 2
+        //                 pr1=14.97
+        //             break;
+        //             case "C": // you get the point
+        //                 pr1=15.20
+        //             break;
+        //             case "D":
+        //                 pr1=15.65
+        //             break;
+        //             case "E":
+        //                 pr1=15.89
+        //             break;
+        //             case "F":
+        //                 pr1=16.36
+        //             break;
+        //             case "G":
+        //                 pr1=16.61
+        //             break;
+        //             case "H":
+        //                 pr1=16.94
+        //             break;
+        //             case "I":
+        //                 pr1=17.19
+        //             break;
+        //             case "J":
+        //                 pr1=17.54
+        //             break;
+        //             case "K":
+        //                 pr1=17.80
+        //             break;
+        //             case "L":
+        //                 pr1=18.18
+        //             break;
+        //             case "M":
+        //                 pr1=18.43
+        //             break;
+        //         }
+        //     case "3": // pay grade 3
+        //         switch(ps1){
+        //             case "A": // step 1
+        //                 pr1=14.96
+        //             break;
+        //             case "B": // step 2
+        //                 pr1=15.41
+        //             break;
+        //             case "C": // you get the point
+        //                 pr1=15.64
+        //             break;
+        //             case "D":
+        //                 pr1=16.11
+        //             break;
+        //             case "E":
+        //                 pr1=16.35
+        //             break;
+        //             case "F":
+        //                 pr1=16.84
+        //             break;
+        //             case "G":
+        //                 pr1=17.09
+        //             break;
+        //             case "H":
+        //                 pr1=17.43
+        //             break;
+        //             case "I":
+        //                 pr1=17.69
+        //             break;
+        //             case "J":
+        //                 pr1=18.05
+        //             break;
+        //             case "K":
+        //                 pr1=18.32
+        //             break;
+        //             case "L":
+        //                 pr1=18.68
+        //             break;
+        //             case "M":
+        //                 pr1=18.96
+        //             break;
+        //         }
+        //     case "4": // pay grade 4
+        //         switch(ps1){
+        //             case "A": // step 1
+        //                 pr1=15.94
+        //             break;
+        //             case "B": // step 2
+        //                 pr1=16.42
+        //             break;
+        //             case "C": // you get the point
+        //                 pr1=16.66
+        //             break;
+        //             case "D":
+        //                 pr1=17.16
+        //             break;
+        //             case "E":
+        //                 pr1=17.42
+        //             break;
+        //             case "F":
+        //                 pr1=17.94
+        //             break;
+        //             case "G":
+        //                 pr1=18.21
+        //             break;
+        //             case "H":
+        //                 pr1=18.58
+        //             break;
+        //             case "I":
+        //                 pr1=18.85
+        //             break;
+        //             case "J":
+        //                 pr1=19.23
+        //             break;
+        //             case "K":
+        //                 pr1=19.52
+        //             break;
+        //             case "L":
+        //                 pr1=19.91
+        //             break;
+        //             case "M":
+        //                 pr1=20.21
+        //             break;
+        //         }
+        //     case "5": // pay grade 5
+        //         switch(ps1){
+        //             case "A": // step 1
+        //                 pr1=17.16
+        //             break;
+        //             case "B": // step 2
+        //                 pr1=17.68
+        //             break;
+        //             case "C": // you get the point
+        //                 pr1=17.94
+        //             break;
+        //             case "D":
+        //                 pr1=18.48
+        //             break;
+        //             case "E":
+        //                 pr1=18.76
+        //             break;
+        //             case "F":
+        //                 pr1=19.32
+        //             break;
+        //             case "G":
+        //                 pr1=19.61
+        //             break;
+        //             case "H":
+        //                 pr1=20.00
+        //             break;
+        //             case "I":
+        //                 pr1=20.30
+        //             break;
+        //             case "J":
+        //                 pr1=20.71
+        //             break;
+        //             case "K":
+        //                 pr1=21.02
+        //             break;
+        //             case "L":
+        //                 pr1=21.44
+        //             break;
+        //             case "M":
+        //                 pr1=21.76
+        //             break;
+        //         }
+        //     case "6": // pay grade 6
+        //         switch(ps1){
+        //             case "A": // step 1
+        //                 pr1=17.90
+        //             break;
+        //             case "B": // step 2
+        //                 pr1=18.44
+        //             break;
+        //             case "C": // you get the point
+        //                 pr1=18.71
+        //             break;
+        //             case "D":
+        //                 pr1=19.27
+        //             break;
+        //             case "E":
+        //                 pr1=19.56
+        //             break;
+        //             case "F":
+        //                 pr1=20.15
+        //             break;
+        //             case "G":
+        //                 pr1=20.45
+        //             break;
+        //             case "H":
+        //                 pr1=20.86
+        //             break;
+        //             case "I":
+        //                 pr1=21.17
+        //             break;
+        //             case "J":
+        //                 pr1=21.60
+        //             break;
+        //             case "K":
+        //                 pr1=21.92
+        //             break;
+        //             case "L":
+        //                 pr1=22.36
+        //             break;
+        //             case "M":
+        //                 pr1=22.70
+        //             break;
+        //         }
+        //     case "7": // pay grade 7
+        //         switch(ps1){
+        //             case "A": // step 1
+        //                 pr1=18.63
+        //             break;
+        //             case "B": // step 2
+        //                 pr1=19.19
+        //             break;
+        //             case "C": // you get the point
+        //                 pr1=19.48
+        //             break;
+        //             case "D":
+        //                 pr1=20.07
+        //             break;
+        //             case "E":
+        //                 pr1=20.37
+        //             break;
+        //             case "F":
+        //                 pr1=20.98
+        //             break;
+        //             case "G":
+        //                 pr1=21.29
+        //             break;
+        //             case "H":
+        //                 pr1=21.72
+        //             break;
+        //             case "I":
+        //                 pr1=22.04
+        //             break;
+        //             case "J":
+        //                 pr1=22.49
+        //             break;
+        //             case "K":
+        //                 pr1=22.82
+        //             break;
+        //             case "L":
+        //                 pr1=23.28
+        //             break;
+        //             case "M":
+        //                 pr1=23.63
+        //             break;
+        //         }
+        //     case "8": // pay grade 8
+        //         switch(ps1){
+        //             case "A": // step 1
+        //                 pr1=19.84
+        //             break;
+        //             case "B": // step 2
+        //                 pr1=20.44
+        //             break;
+        //             case "C": // you get the point
+        //                 pr1=20.74
+        //             break;
+        //             case "D":
+        //                 pr1=21.37
+        //             break;
+        //             case "E":
+        //                 pr1=21.69
+        //             break;
+        //             case "F":
+        //                 pr1=22.34
+        //             break;
+        //             case "G":
+        //                 pr1=22.67
+        //             break;
+        //             case "H":
+        //                 pr1=23.12
+        //             break;
+        //             case "I":
+        //                 pr1=23.47
+        //             break;
+        //             case "J":
+        //                 pr1=23.94
+        //             break;
+        //             case "K":
+        //                 pr1=24.30
+        //             break;
+        //             case "L":
+        //                 pr1=24.79
+        //             break;
+        //             case "M":
+        //                 pr1=25.16
+        //             break;
+        //         }
+        //     case "9": // pay grade 9
+        //         switch(ps1){
+        //             case "A": // step 1
+        //                 pr1=20.83
+        //             break;
+        //             case "B": // step 2
+        //                 pr1=21.46
+        //             break;
+        //             case "C": // you get the point
+        //                 pr1=21.78
+        //             break;
+        //             case "D":
+        //                 pr1=22.43
+        //             break;
+        //             case "E":
+        //                 pr1=22.77
+        //             break;
+        //             case "F":
+        //                 pr1=23.45
+        //             break;
+        //             case "G":
+        //                 pr1=23.80
+        //             break;
+        //             case "H":
+        //                 pr1=24.28
+        //             break;
+        //             case "I":
+        //                 pr1=24.64
+        //             break;
+        //             case "J":
+        //                 pr1=25.14
+        //             break;
+        //             case "K1":
+        //                 pr1=25.51
+        //             break;
+        //             case "L":
+        //                 pr1=26.02
+        //             break;
+        //             case "M":
+        //                 pr1=26.41
+        //             break;
+        //         }
+        //     case "10": // pay grade 10
+        //         switch(ps1){
+        //             case "A": // step 1
+        //                 pr1=23.31
+        //             break;
+        //             case "B": // step 2
+        //                 pr1=24.01
+        //             break;
+        //             case "C": // you get the point
+        //                 pr1=24.37
+        //             break;
+        //             case "D":
+        //                 pr1=25.10
+        //             break;
+        //             case "E":
+        //                 pr1=25.47
+        //             break;
+        //             case "F":
+        //                 pr1=26.24
+        //             break;
+        //             case "G":
+        //                 pr1=26.63
+        //             break;
+        //             case "H":
+        //                 pr1=27.17
+        //             break;
+        //             case "I":
+        //                 pr1=27.57
+        //             break;
+        //             case "J":
+        //                 pr1=28.12
+        //             break;
+        //             case "K":
+        //                 pr1=28.55
+        //             break;
+        //             case "L":
+        //                 pr1=29.12
+        //             break;
+        //             case "M":
+        //                 pr1=29.55
+        //             break;
+        //         }
+        //     case "11": // pay grade 11
+        //         switch(ps1){
+        //             case "A": // step 1
+        //                 pr1=25.78
+        //             break;
+        //             case "B": // step 2
+        //                 pr1=26.56
+        //             break;
+        //             case "C": // you get the point
+        //                 pr1=26.96
+        //             break;
+        //             case "D":
+        //                 pr1=27.77
+        //             break;
+        //             case "E":
+        //                 pr1=28.18
+        //             break;
+        //             case "F":
+        //                 pr1=29.03
+        //             break;
+        //             case "G":
+        //                 pr1=29.46
+        //             break;
+        //             case "H":
+        //                 pr1=30.05
+        //             break;
+        //             case "I":
+        //                 pr1=30.50
+        //             break;
+        //             case "J":
+        //                 pr1=31.11
+        //             break;
+        //             case "K":
+        //                 pr1=31.58
+        //             break;
+        //             case "L":
+        //                 pr1=32.21
+        //             break;
+        //             case "M":
+        //                 pr1=32.96
+        //             break;
+        //         }
+        //     case "12": // pay grade 12
+        //         switch(ps1){
+        //             case "A": // step 1
+        //                 pr1=30.74
+        //             break;
+        //             case "B": // step 2
+        //                 pr1=31.66
+        //             break;
+        //             case "C": // you get the point
+        //                 pr1=32.13
+        //             break;
+        //             case "D":
+        //                 pr1=33.10
+        //             break;
+        //             case "E":
+        //                 pr1=33.59
+        //             break;
+        //             case "F":
+        //                 pr1=34.60
+        //             break;
+        //             case "G":
+        //                 pr1=35.12
+        //             break;
+        //             case "H":
+        //                 pr1=35.82
+        //             break;
+        //             case "I":
+        //                 pr1=36.36
+        //             break;
+        //             case "J":
+        //                 pr1=37.09
+        //             break;
+        //             case "K":
+        //                 pr1=37.65
+        //             break;
+        //             case "L":
+        //                 pr1=38.40
+        //             break;
+        //             case "M":
+        //                 pr1=38.97
+        //             break;
+        //         }
+        //     case "13": // pay grade 13
+        //         switch(ps1){
+        //             case "A": // step 1
+        //                 pr1=33.54
+        //             break;
+        //             case "B": // step 2
+        //                 pr1=34.55
+        //             break;
+        //             case "C": // you get the point
+        //                 pr1=35.06
+        //             break;
+        //             case "D":
+        //                 pr1=36.12
+        //             break;
+        //             case "E":
+        //                 pr1=36.66
+        //             break;
+        //             case "F":
+        //                 pr1=37.76
+        //             break;
+        //             case "G":
+        //                 pr1=38.32
+        //             break;
+        //             case "H":
+        //                 pr1=39.09
+        //             break;
+        //             case "I":
+        //                 pr1=39.68
+        //             break;
+        //             case "J":
+        //                 pr1=40.47
+        //             break;
+        //             case "K":
+        //                 pr1=41.08
+        //             break;
+        //             case "L":
+        //                 pr1=41.90
+        //             break;
+        //             case "M":
+        //                 pr1=42.53
+        //             break;
+        //             default:
+        //             console.log("You are too dumb to code. Give it Up");
+        //         }
+                
+        // }
         // seeing this here I realize this wont work. need two sets of variables for each with dif names. 
         // long comment because I am wrapping up for the day and want to remember what I was thinking
 
-        switch(pg2){
-            case "1": // pay grade 1 
-                switch(ps2){
-                    case "A": // step 1
-                        pr2=14.28
-                    break;
-                    case "B": // step 2
-                        pr2=14.71
-                    break;
-                    case "C": // you get the point
-                        pr2=14.93
-                    break;
-                    case "D":
-                        pr2=15.38
-                    break;
-                    case "E":
-                        pr2=15.61
-                    break;
-                    case "F":
-                        pr2=16.08
-                    break;
-                    case "G":
-                        pr2=16.32
-                    break;
-                    case "H":
-                        pr2=16.64
-                    break;
-                    case "I":
-                        pr2=16.89
-                    break;
-                    case "J":
-                        pr2=17.23
-                    break;
-                    case "K":
-                        pr2=17.49
-                    break;
-                    case "L":
-                        pr2=17.84
-                    break;
-                    case "M":
-                        pr2=18.11
-                    break;
-                }
-            case "2": // pay grade 2
-                switch(ps2){
-                    case "A": // step 1
-                        pr2=14.54
-                    break;
-                    case "B": // step 2
-                        pr2=14.97
-                    break;
-                    case "C": // you get the point
-                        pr2=15.20
-                    break;
-                    case "D":
-                        pr2=15.65
-                    break;
-                    case "E":
-                        pr2=15.89
-                    break;
-                    case "F":
-                        pr2=16.36
-                    break;
-                    case "G":
-                        pr2=16.61
-                    break;
-                    case "H":
-                        pr2=16.94
-                    break;
-                    case "I":
-                        pr2=17.19
-                    break;
-                    case "J":
-                        pr2=17.54
-                    break;
-                    case "K":
-                        pr2=17.80
-                    break;
-                    case "L":
-                        pr2=18.18
-                    break;
-                    case "M":
-                        pr2=18.43
-                    break;
-                }
-            case "3": // pay grade 3
-                switch(ps2){
-                    case "A": // step 1
-                        pr2=14.96
-                    break;
-                    case "B": // step 2
-                        pr2=15.41
-                    break;
-                    case "C": // you get the point
-                        pr2=15.64
-                    break;
-                    case "D":
-                        pr2=16.11
-                    break;
-                    case "E":
-                        pr2=16.35
-                    break;
-                    case "F":
-                        pr2=16.84
-                    break;
-                    case "G":
-                        pr2=17.09
-                    break;
-                    case "H":
-                        pr2=17.43
-                    break;
-                    case "I":
-                        pr2=17.69
-                    break;
-                    case "J":
-                        pr2=18.05
-                    break;
-                    case "K":
-                        pr2=18.32
-                    break;
-                    case "L":
-                        pr2=18.68
-                    break;
-                    case "M":
-                        pr2=18.96
-                    break;
-                }
-            case "4": // pay grade 4
-                switch(ps2){
-                    case "A": // step 1
-                        pr2=15.94
-                    break;
-                    case "B": // step 2
-                        pr2=16.42
-                    break;
-                    case "C": // you get the point
-                        pr2=16.66
-                    break;
-                    case "D":
-                        pr2=17.16
-                    break;
-                    case "E":
-                        pr2=17.42
-                    break;
-                    case "F":
-                        pr2=17.94
-                    break;
-                    case "G":
-                        pr2=18.21
-                    break;
-                    case "H":
-                        pr2=18.58
-                    break;
-                    case "I":
-                        pr2=18.85
-                    break;
-                    case "J":
-                        pr2=19.23
-                    break;
-                    case "K":
-                        pr2=19.52
-                    break;
-                    case "L":
-                        pr2=19.91
-                    break;
-                    case "M":
-                        pr2=20.21
-                    break;
-                }
-            case "5": // pay grade 5
-                switch(ps2){
-                    case "A": // step 1
-                        pr2=17.16
-                    break;
-                    case "B": // step 2
-                        pr2=17.68
-                    break;
-                    case "C": // you get the point
-                        pr2=17.94
-                    break;
-                    case "D":
-                        pr2=18.48
-                    break;
-                    case "E":
-                        pr2=18.76
-                    break;
-                    case "F":
-                        pr2=19.32
-                    break;
-                    case "G":
-                        pr2=19.61
-                    break;
-                    case "H":
-                        pr2=20.00
-                    break;
-                    case "I":
-                        pr2=20.30
-                    break;
-                    case "J":
-                        pr2=20.71
-                    break;
-                    case "K":
-                        pr2=21.02
-                    break;
-                    case "L":
-                        pr2=21.44
-                    break;
-                    case "M":
-                        pr2=21.76
-                    break;
-                }
-            case "6": // pay grade 6
-                switch(ps2){
-                    case "A": // step 1
-                        pr2=17.90
-                    break;
-                    case "B": // step 2
-                        pr2=18.44
-                    break;
-                    case "C": // you get the point
-                        pr2=18.71
-                    break;
-                    case "D":
-                        pr2=19.27
-                    break;
-                    case "E":
-                        pr2=19.56
-                    break;
-                    case "F":
-                        pr2=20.15
-                    break;
-                    case "G":
-                        pr2=20.45
-                    break;
-                    case "H":
-                        pr2=20.86
-                    break;
-                    case "I":
-                        pr2=21.17
-                    break;
-                    case "J":
-                        pr2=21.60
-                    break;
-                    case "K":
-                        pr2=21.92
-                    break;
-                    case "L":
-                        pr2=22.36
-                    break;
-                    case "M":
-                        pr2=22.70
-                    break;
-                }
-            case "7": // pay grade 7
-                switch(ps2){
-                    case "A": // step 1
-                        pr2=18.63
-                    break;
-                    case "B": // step 2
-                        pr2=19.19
-                    break;
-                    case "C": // you get the point
-                        pr2=19.48
-                    break;
-                    case "D":
-                        pr2=20.07
-                    break;
-                    case "E":
-                        pr2=20.37
-                    break;
-                    case "F":
-                        pr2=20.98
-                    break;
-                    case "G":
-                        pr2=21.29
-                    break;
-                    case "H":
-                        pr2=21.72
-                    break;
-                    case "I":
-                        pr2=22.04
-                    break;
-                    case "J":
-                        pr2=22.49
-                    break;
-                    case "K":
-                        pr2=22.82
-                    break;
-                    case "L":
-                        pr2=23.28
-                    break;
-                    case "M":
-                        pr2=23.63
-                    break;
-                }
-            case "8": // pay grade 8
-                switch(ps2){
-                    case "A": // step 1
-                        pr2=19.84
-                    break;
-                    case "B": // step 2
-                        pr2=20.44
-                    break;
-                    case "C": // you get the point
-                        pr2=20.74
-                    break;
-                    case "D":
-                        pr2=21.37
-                    break;
-                    case "E":
-                        pr2=21.69
-                    break;
-                    case "F":
-                        pr2=22.34
-                    break;
-                    case "G":
-                        pr2=22.67
-                    break;
-                    case "H":
-                        pr2=23.12
-                    break;
-                    case "I":
-                        pr2=23.47
-                    break;
-                    case "J":
-                        pr2=23.94
-                    break;
-                    case "K":
-                        pr2=24.30
-                    break;
-                    case "L":
-                        pr2=24.79
-                    break;
-                    case "M":
-                        pr2=25.16
-                    break;
-                }
-            case "9": // pay grade 9
-                switch(ps2){
-                    case "A": // step 1
-                        pr2=20.83
-                    break;
-                    case "B": // step 2
-                        pr2=21.46
-                    break;
-                    case "C": // you get the point
-                        pr2=21.78
-                    break;
-                    case "D":
-                        pr2=22.43
-                    break;
-                    case "E":
-                        pr2=22.77
-                    break;
-                    case "F":
-                        pr2=23.45
-                    break;
-                    case "G":
-                        pr2=23.80
-                    break;
-                    case "H":
-                        pr2=24.28
-                    break;
-                    case "I":
-                        pr2=24.64
-                    break;
-                    case "J":
-                        pr2=25.14
-                    break;
-                    case "K":
-                        pr2=25.51
-                    break;
-                    case "L":
-                        pr2=26.02
-                    break;
-                    case "M":
-                        pr2=26.41
-                    break;
-                }
-            case "10": // pay grade 10
-                switch(ps2){
-                    case "A": // step 1
-                        pr2=23.31
-                    break;
-                    case "B": // step 2
-                        pr2=24.01
-                    break;
-                    case "C": // you get the point
-                        pr2=24.37
-                    break;
-                    case "D":
-                        pr2=25.10
-                    break;
-                    case "E":
-                        pr2=25.47
-                    break;
-                    case "F":
-                        pr2=26.24
-                    break;
-                    case "G":
-                        pr2=26.63
-                    break;
-                    case "H":
-                        pr2=27.17
-                    break;
-                    case "I":
-                        pr2=27.57
-                    break;
-                    case "J":
-                        pr2=28.12
-                    break;
-                    case "K":
-                        pr2=28.55
-                    break;
-                    case "L":
-                        pr2=29.12
-                    break;
-                    case "M":
-                        pr2=29.55
-                    break;
-                }
-            case "11": // pay grade 11
-                switch(ps2){
-                    case "A": // step 1
-                        pr2=25.78
-                    break;
-                    case "B": // step 2
-                        pr2=26.56
-                    break;
-                    case "C": // you get the point
-                        pr2=26.96
-                    break;
-                    case "D":
-                        pr2=27.77
-                    break;
-                    case "E":
-                        pr2=28.18
-                    break;
-                    case "F":
-                        pr2=29.03
-                    break;
-                    case "G":
-                        pr2=29.46
-                    break;
-                    case "H":
-                        pr2=30.05
-                    break;
-                    case "I":
-                        pr2=30.50
-                    break;
-                    case "J":
-                        pr2=31.11
-                    break;
-                    case "K":
-                        pr2=31.58
-                    break;
-                    case "L":
-                        pr2=32.21
-                    break;
-                    case "M":
-                        pr2=32.96
-                    break;
-                }
-            case "12": // pay grade 12
-                switch(ps2){
-                    case "A": // step 1
-                        pr2=30.74
-                    break;
-                    case "B": // step 2
-                        pr2=31.66
-                    break;
-                    case "C": // you get the point
-                        pr2=32.13
-                    break;
-                    case "D":
-                        pr2=33.10
-                    break;
-                    case "E":
-                        pr2=33.59
-                    break;
-                    case "F":
-                        pr2=34.60
-                    break;
-                    case "G":
-                        pr2=35.12
-                    break;
-                    case "H":
-                        pr2=35.82
-                    break;
-                    case "I":
-                        pr2=36.36
-                    break;
-                    case "J":
-                        pr2=37.09
-                    break;
-                    case "K":
-                        pr2=37.65
-                    break;
-                    case "L":
-                        pr2=38.40
-                    break;
-                    case "M":
-                        pr2=38.97
-                    break;
-                }
-            case "13": // pay grade 13
-                switch(ps2){
-                    case "A": // step 1
-                        pr2=33.54
-                    break;
-                    case "B": // step 2
-                        pr2=34.55
-                    break;
-                    case "C": // you get the point
-                        pr2=35.06
-                    break;
-                    case "D":
-                        pr2=36.12
-                    break;
-                    case "E":
-                        pr2=36.66
-                    break;
-                    case "F":
-                        pr2=37.76
-                    break;
-                    case "G":
-                        pr2=38.32
-                    break;
-                    case "H":
-                        pr2=39.09
-                    break;
-                    case "I":
-                        pr2=39.68
-                    break;
-                    case "J":
-                        pr2=40.47
-                    break;
-                    case "K":
-                        pr2=41.08
-                    break;
-                    case "L":
-                        pr2=41.90
-                    break;
-                    case "M":
-                        pr2=42.53
-                    break;
-                    default:
-                    console.log("You suck. Kill yourself dummy");
-                }
+        // switch(pg2){
+        //     case "1": // pay grade 1 
+        //         switch(ps2){
+        //             case "A": // step 1
+        //                 pr2=14.28
+        //             break;
+        //             case "B": // step 2
+        //                 pr2=14.71
+        //             break;
+        //             case "C": // you get the point
+        //                 pr2=14.93
+        //             break;
+        //             case "D":
+        //                 pr2=15.38
+        //             break;
+        //             case "E":
+        //                 pr2=15.61
+        //             break;
+        //             case "F":
+        //                 pr2=16.08
+        //             break;
+        //             case "G":
+        //                 pr2=16.32
+        //             break;
+        //             case "H":
+        //                 pr2=16.64
+        //             break;
+        //             case "I":
+        //                 pr2=16.89
+        //             break;
+        //             case "J":
+        //                 pr2=17.23
+        //             break;
+        //             case "K":
+        //                 pr2=17.49
+        //             break;
+        //             case "L":
+        //                 pr2=17.84
+        //             break;
+        //             case "M":
+        //                 pr2=18.11
+        //             break;
+        //         }
+        //     case "2": // pay grade 2
+        //         switch(ps2){
+        //             case "A": // step 1
+        //                 pr2=14.54
+        //             break;
+        //             case "B": // step 2
+        //                 pr2=14.97
+        //             break;
+        //             case "C": // you get the point
+        //                 pr2=15.20
+        //             break;
+        //             case "D":
+        //                 pr2=15.65
+        //             break;
+        //             case "E":
+        //                 pr2=15.89
+        //             break;
+        //             case "F":
+        //                 pr2=16.36
+        //             break;
+        //             case "G":
+        //                 pr2=16.61
+        //             break;
+        //             case "H":
+        //                 pr2=16.94
+        //             break;
+        //             case "I":
+        //                 pr2=17.19
+        //             break;
+        //             case "J":
+        //                 pr2=17.54
+        //             break;
+        //             case "K":
+        //                 pr2=17.80
+        //             break;
+        //             case "L":
+        //                 pr2=18.18
+        //             break;
+        //             case "M":
+        //                 pr2=18.43
+        //             break;
+        //         }
+        //     case "3": // pay grade 3
+        //         switch(ps2){
+        //             case "A": // step 1
+        //                 pr2=14.96
+        //             break;
+        //             case "B": // step 2
+        //                 pr2=15.41
+        //             break;
+        //             case "C": // you get the point
+        //                 pr2=15.64
+        //             break;
+        //             case "D":
+        //                 pr2=16.11
+        //             break;
+        //             case "E":
+        //                 pr2=16.35
+        //             break;
+        //             case "F":
+        //                 pr2=16.84
+        //             break;
+        //             case "G":
+        //                 pr2=17.09
+        //             break;
+        //             case "H":
+        //                 pr2=17.43
+        //             break;
+        //             case "I":
+        //                 pr2=17.69
+        //             break;
+        //             case "J":
+        //                 pr2=18.05
+        //             break;
+        //             case "K":
+        //                 pr2=18.32
+        //             break;
+        //             case "L":
+        //                 pr2=18.68
+        //             break;
+        //             case "M":
+        //                 pr2=18.96
+        //             break;
+        //         }
+        //     case "4": // pay grade 4
+        //         switch(ps2){
+        //             case "A": // step 1
+        //                 pr2=15.94
+        //             break;
+        //             case "B": // step 2
+        //                 pr2=16.42
+        //             break;
+        //             case "C": // you get the point
+        //                 pr2=16.66
+        //             break;
+        //             case "D":
+        //                 pr2=17.16
+        //             break;
+        //             case "E":
+        //                 pr2=17.42
+        //             break;
+        //             case "F":
+        //                 pr2=17.94
+        //             break;
+        //             case "G":
+        //                 pr2=18.21
+        //             break;
+        //             case "H":
+        //                 pr2=18.58
+        //             break;
+        //             case "I":
+        //                 pr2=18.85
+        //             break;
+        //             case "J":
+        //                 pr2=19.23
+        //             break;
+        //             case "K":
+        //                 pr2=19.52
+        //             break;
+        //             case "L":
+        //                 pr2=19.91
+        //             break;
+        //             case "M":
+        //                 pr2=20.21
+        //             break;
+        //         }
+        //     case "5": // pay grade 5
+        //         switch(ps2){
+        //             case "A": // step 1
+        //                 pr2=17.16
+        //             break;
+        //             case "B": // step 2
+        //                 pr2=17.68
+        //             break;
+        //             case "C": // you get the point
+        //                 pr2=17.94
+        //             break;
+        //             case "D":
+        //                 pr2=18.48
+        //             break;
+        //             case "E":
+        //                 pr2=18.76
+        //             break;
+        //             case "F":
+        //                 pr2=19.32
+        //             break;
+        //             case "G":
+        //                 pr2=19.61
+        //             break;
+        //             case "H":
+        //                 pr2=20.00
+        //             break;
+        //             case "I":
+        //                 pr2=20.30
+        //             break;
+        //             case "J":
+        //                 pr2=20.71
+        //             break;
+        //             case "K":
+        //                 pr2=21.02
+        //             break;
+        //             case "L":
+        //                 pr2=21.44
+        //             break;
+        //             case "M":
+        //                 pr2=21.76
+        //             break;
+        //         }
+        //     case "6": // pay grade 6
+        //         switch(ps2){
+        //             case "A": // step 1
+        //                 pr2=17.90
+        //             break;
+        //             case "B": // step 2
+        //                 pr2=18.44
+        //             break;
+        //             case "C": // you get the point
+        //                 pr2=18.71
+        //             break;
+        //             case "D":
+        //                 pr2=19.27
+        //             break;
+        //             case "E":
+        //                 pr2=19.56
+        //             break;
+        //             case "F":
+        //                 pr2=20.15
+        //             break;
+        //             case "G":
+        //                 pr2=20.45
+        //             break;
+        //             case "H":
+        //                 pr2=20.86
+        //             break;
+        //             case "I":
+        //                 pr2=21.17
+        //             break;
+        //             case "J":
+        //                 pr2=21.60
+        //             break;
+        //             case "K":
+        //                 pr2=21.92
+        //             break;
+        //             case "L":
+        //                 pr2=22.36
+        //             break;
+        //             case "M":
+        //                 pr2=22.70
+        //             break;
+        //         }
+        //     case "7": // pay grade 7
+        //         switch(ps2){
+        //             case "A": // step 1
+        //                 pr2=18.63
+        //             break;
+        //             case "B": // step 2
+        //                 pr2=19.19
+        //             break;
+        //             case "C": // you get the point
+        //                 pr2=19.48
+        //             break;
+        //             case "D":
+        //                 pr2=20.07
+        //             break;
+        //             case "E":
+        //                 pr2=20.37
+        //             break;
+        //             case "F":
+        //                 pr2=20.98
+        //             break;
+        //             case "G":
+        //                 pr2=21.29
+        //             break;
+        //             case "H":
+        //                 pr2=21.72
+        //             break;
+        //             case "I":
+        //                 pr2=22.04
+        //             break;
+        //             case "J":
+        //                 pr2=22.49
+        //             break;
+        //             case "K":
+        //                 pr2=22.82
+        //             break;
+        //             case "L":
+        //                 pr2=23.28
+        //             break;
+        //             case "M":
+        //                 pr2=23.63
+        //             break;
+        //         }
+        //     case "8": // pay grade 8
+        //         switch(ps2){
+        //             case "A": // step 1
+        //                 pr2=19.84
+        //             break;
+        //             case "B": // step 2
+        //                 pr2=20.44
+        //             break;
+        //             case "C": // you get the point
+        //                 pr2=20.74
+        //             break;
+        //             case "D":
+        //                 pr2=21.37
+        //             break;
+        //             case "E":
+        //                 pr2=21.69
+        //             break;
+        //             case "F":
+        //                 pr2=22.34
+        //             break;
+        //             case "G":
+        //                 pr2=22.67
+        //             break;
+        //             case "H":
+        //                 pr2=23.12
+        //             break;
+        //             case "I":
+        //                 pr2=23.47
+        //             break;
+        //             case "J":
+        //                 pr2=23.94
+        //             break;
+        //             case "K":
+        //                 pr2=24.30
+        //             break;
+        //             case "L":
+        //                 pr2=24.79
+        //             break;
+        //             case "M":
+        //                 pr2=25.16
+        //             break;
+        //         }
+        //     case "9": // pay grade 9
+        //         switch(ps2){
+        //             case "A": // step 1
+        //                 pr2=20.83
+        //             break;
+        //             case "B": // step 2
+        //                 pr2=21.46
+        //             break;
+        //             case "C": // you get the point
+        //                 pr2=21.78
+        //             break;
+        //             case "D":
+        //                 pr2=22.43
+        //             break;
+        //             case "E":
+        //                 pr2=22.77
+        //             break;
+        //             case "F":
+        //                 pr2=23.45
+        //             break;
+        //             case "G":
+        //                 pr2=23.80
+        //             break;
+        //             case "H":
+        //                 pr2=24.28
+        //             break;
+        //             case "I":
+        //                 pr2=24.64
+        //             break;
+        //             case "J":
+        //                 pr2=25.14
+        //             break;
+        //             case "K":
+        //                 pr2=25.51
+        //             break;
+        //             case "L":
+        //                 pr2=26.02
+        //             break;
+        //             case "M":
+        //                 pr2=26.41
+        //             break;
+        //         }
+        //     case "10": // pay grade 10
+        //         switch(ps2){
+        //             case "A": // step 1
+        //                 pr2=23.31
+        //             break;
+        //             case "B": // step 2
+        //                 pr2=24.01
+        //             break;
+        //             case "C": // you get the point
+        //                 pr2=24.37
+        //             break;
+        //             case "D":
+        //                 pr2=25.10
+        //             break;
+        //             case "E":
+        //                 pr2=25.47
+        //             break;
+        //             case "F":
+        //                 pr2=26.24
+        //             break;
+        //             case "G":
+        //                 pr2=26.63
+        //             break;
+        //             case "H":
+        //                 pr2=27.17
+        //             break;
+        //             case "I":
+        //                 pr2=27.57
+        //             break;
+        //             case "J":
+        //                 pr2=28.12
+        //             break;
+        //             case "K":
+        //                 pr2=28.55
+        //             break;
+        //             case "L":
+        //                 pr2=29.12
+        //             break;
+        //             case "M":
+        //                 pr2=29.55
+        //             break;
+        //         }
+        //     case "11": // pay grade 11
+        //         switch(ps2){
+        //             case "A": // step 1
+        //                 pr2=25.78
+        //             break;
+        //             case "B": // step 2
+        //                 pr2=26.56
+        //             break;
+        //             case "C": // you get the point
+        //                 pr2=26.96
+        //             break;
+        //             case "D":
+        //                 pr2=27.77
+        //             break;
+        //             case "E":
+        //                 pr2=28.18
+        //             break;
+        //             case "F":
+        //                 pr2=29.03
+        //             break;
+        //             case "G":
+        //                 pr2=29.46
+        //             break;
+        //             case "H":
+        //                 pr2=30.05
+        //             break;
+        //             case "I":
+        //                 pr2=30.50
+        //             break;
+        //             case "J":
+        //                 pr2=31.11
+        //             break;
+        //             case "K":
+        //                 pr2=31.58
+        //             break;
+        //             case "L":
+        //                 pr2=32.21
+        //             break;
+        //             case "M":
+        //                 pr2=32.96
+        //             break;
+        //         }
+        //     case "12": // pay grade 12
+        //         switch(ps2){
+        //             case "A": // step 1
+        //                 pr2=30.74
+        //             break;
+        //             case "B": // step 2
+        //                 pr2=31.66
+        //             break;
+        //             case "C": // you get the point
+        //                 pr2=32.13
+        //             break;
+        //             case "D":
+        //                 pr2=33.10
+        //             break;
+        //             case "E":
+        //                 pr2=33.59
+        //             break;
+        //             case "F":
+        //                 pr2=34.60
+        //             break;
+        //             case "G":
+        //                 pr2=35.12
+        //             break;
+        //             case "H":
+        //                 pr2=35.82
+        //             break;
+        //             case "I":
+        //                 pr2=36.36
+        //             break;
+        //             case "J":
+        //                 pr2=37.09
+        //             break;
+        //             case "K":
+        //                 pr2=37.65
+        //             break;
+        //             case "L":
+        //                 pr2=38.40
+        //             break;
+        //             case "M":
+        //                 pr2=38.97
+        //             break;
+        //         }
+        //     case "13": // pay grade 13
+        //         switch(ps2){
+        //             case "A": // step 1
+        //                 pr2=33.54
+        //             break;
+        //             case "B": // step 2
+        //                 pr2=34.55
+        //             break;
+        //             case "C": // you get the point
+        //                 pr2=35.06
+        //             break;
+        //             case "D":
+        //                 pr2=36.12
+        //             break;
+        //             case "E":
+        //                 pr2=36.66
+        //             break;
+        //             case "F":
+        //                 pr2=37.76
+        //             break;
+        //             case "G":
+        //                 pr2=38.32
+        //             break;
+        //             case "H":
+        //                 pr2=39.09
+        //             break;
+        //             case "I":
+        //                 pr2=39.68
+        //             break;
+        //             case "J":
+        //                 pr2=40.47
+        //             break;
+        //             case "K":
+        //                 pr2=41.08
+        //             break;
+        //             case "L":
+        //                 pr2=41.90
+        //             break;
+        //             case "M":
+        //                 pr2=42.53
+        //             break;
+        //             default:
+        //             console.log("You suck. Kill yourself dummy");
+        //         }
                 
-        }
+        // }
         // error alerts
         if (pg1=="NULL") {
             answerdisplay.innerHTML="Invalid First Pay Grade";
@@ -1275,8 +2324,8 @@
             console.log("pr1 is: " + pr1);
             console.log("pr1 is type of: " + typeof pr1);
             console.log("pr2 is: " + pr2);
-            console.log("pg1 is type of: " + typeof pg1);
             console.log("pg1 is: " + pg1);
+            console.log("pg1 is type of: " + typeof pg1);
             console.log("ps1 is: " + ps1);
             console.log("pg2 is: " + pg2);
             console.log("ps2 is: " + ps2);
