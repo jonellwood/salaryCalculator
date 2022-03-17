@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <hr>
+        <form id="salaryCalculator" method="post" action="/home">
+        <label for="paygrade1">Select pg1</label>
+        <select id="paygrade1" class="form-select" onchange="showfields(this)">
+            <option value="1">1</option>
+            <option value="2">2</option> 
+        </select> 
+        <label for=""paystep1>Select ps1</label>
+        <label for="paystep1" class=""form-select" onchange="showfields(this)">
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </label>
+        <hr>
+        <input class="form-submit" type="submit" onclick="processForm()" value="#2 Make it so">
+        </form>
+        <p id="resultsblock style="display: none">this</p>
+        <p id="resultsblock2 style="display: none">that</p>
+        <p id="resultsblock3 style="display: none">the other</p>
+    </div>
+
+    <script type="text/javascript">
+
+    function showfields(val){
+        var array1= new Array("1", "2");
+        if(array1.indexOf(val.value) !== -1)
+        {
+            document.getElementById("paygrade1").style.display-"block";
+            document.getElementById("paystep1").style.display-"block";
+            document.getElementById("resultsblock").style.display="block";
+            document.getElementById("resultsblock2").style.display="block";
+            document.getElementById("resultsblock3").style.display="block";
+        }    
+    }
+
+    function processForm(e){
+        var array1= new Array("1", "2");
+        var answerdisplay = document.getElementById("resultsblock");
+        var answerdisplay = document.getElementById("resultsblock2");
+        var answerdisplay = document.getElementById("resultsblock3");
+        var pg1 = document.getElementById("paygrade1");
+        var ps1 = document.getElementById("paystep1");
+
+        var pr1;
+        var ps1;
+
+        switch(pg1){
+            case "1":
+                switch(ps1){
+                    case "A":
+                        pr1=14.28
+                    break;
+                    case "B":
+                        pr1=14.71
+                    break;
+                    default:
+                        pr1="You suck at Javascript loser"
+                }
+        }
+        console.log("pr1 is: " + pr1);
+        console.log("pg1 is: " + pg1);
+        console.log("ps1 is: " + ps1);
+
+        var annualhours = 2080;
+
+        var salary1= (pr1 * annualhours).toFixed(2);
+
+        answerdisplay.innerHTML = "Estimated salary: $" + salary1 + "at pay rate of $" + pr1 + " /hour";
+
+        answerdisplay.style.display="block"
+        answerdisplay2.style.display="block"
+        answerdisplay3.style.display="block"
+
+    }
+    </script>
+</body>
+</html>

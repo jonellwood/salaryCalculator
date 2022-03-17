@@ -114,7 +114,7 @@
     <script type="text/javascript">
         //as an onchange event
     function showfields(val){
-        var array1= new Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13");
+        var array1= new Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
         if(array1.indexOf(val.value) !== -1)
         {
             document.getElementById("paygrade1").style.display-'block';
@@ -128,7 +128,7 @@
     } 
 
     function processForm(e){
-        var array1= new Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13");
+        var array1= new Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
         var answerdisplay = document.getElementById("resultsblock");
         var answerdisplay2 = document.getElementById("resultsblock2");
         var answerdisplay3 = document.getElementById("resultsblock3");
@@ -688,7 +688,10 @@
                     case "M":
                         pr1=42.53
                     break;
+                    default:
+                    console.log("You are too dumb to code. Give it Up");
                 }
+                
         }
         // seeing this here I realize this wont work. need two sets of variables for each with dif names. 
         // long comment because I am wrapping up for the day and want to remember what I was thinking
@@ -696,7 +699,7 @@
         switch(pg2){
             case "1": // pay grade 1 
                 switch(ps2){
-                    case "1": // step 1
+                    case "A": // step 1
                         pr2=14.28
                     break;
                     case "B": // step 2
@@ -1239,7 +1242,10 @@
                     case "M":
                         pr2=42.53
                     break;
+                    default:
+                    console.log("You suck. Kill yourself dummy");
                 }
+                
         }
         // error alerts
         if (pg1=="NULL") {
@@ -1267,7 +1273,9 @@
         //    figure out how to do the math
             
             console.log("pr1 is: " + pr1);
+            console.log("pr1 is type of: " + typeof pr1);
             console.log("pr2 is: " + pr2);
+            console.log("pg1 is type of: " + typeof pg1);
             console.log("pg1 is: " + pg1);
             console.log("ps1 is: " + ps1);
             console.log("pg2 is: " + pg2);
@@ -1282,7 +1290,7 @@
             answerdisplay2.innerHTML = "Estimated Salary 2: $" + salary2 + " at a pay rate of $" + pr2 + " /hour";
             var salaryDif = (salary2-salary1);
             var hourlyDif = (pr2-pr1);
-            answerdisplay3.innerHTML = "The difference in salaries is: $" + (salaryDif) + " and an hourly difference of: $" + hourlyDif.toFixed(2) + " /hour";
+            answerdisplay3.innerHTML = "The difference in salaries is: $" + (salaryDif).toFixed(2) + " and an hourly difference of: $" + hourlyDif.toFixed(2) + " /hour";
             
             answerdisplay.style.display="block";
             answerdisplay2.style.display="block";
