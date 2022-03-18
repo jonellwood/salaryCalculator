@@ -21,7 +21,7 @@
     <!-- <form id="salaryCalculator" method="post" action="/home" onsubmit="return false"> -->
     <form id="salaryCalculator" method="post" action="/home" >
         <div id="selectHolder">
-        <label for="paygrade1">Select First Pay Grade: </label>
+        <label for="paygrade1" class="select-words">Select First Pay Grade: </label>
         <select id="paygrade1" class="form-select" onchange="showfields(this)">
         <!-- <select id="paygrade1" class="form-select"> -->
             <!-- <option value="NULL"></option> -->
@@ -41,7 +41,7 @@
         </select>
         </div>
         <div id="selectHolder">
-            <label for="paystep1">Select First Pay Step:</label>
+            <label for="paystep1" class="select-words">Select First Pay Step:</label>
             <select id="paystep1" class="form-select" onchange="showfields(this)">
             <!-- <select id="paystep1" class="form-select"> -->
                 <!-- <option value="NULL"></option> -->
@@ -63,7 +63,7 @@
         </div>
         <hr>
         <div id="selectHolder">
-        <label for="paygrade2">Select Second Pay Grade: </label>
+        <label for="paygrade2" class="select-words">Select Second Pay Grade: </label>
         <select id="paygrade2" class="form-select" onchange="showfields(this)">
         <!-- <select id="paygrade2" class="form-select"> -->
             <!-- <option value="NULL"></option> -->
@@ -83,7 +83,7 @@
         </select>
         </div>
         <div id="selectHolder">
-            <label for="paystep2">Select Second Pay Step:</label>
+            <label for="paystep2" class="select-words">Select Second Pay Step:</label>
             <select id="paystep2" class="form-select" onchange="showfields(this)">
             <!-- <select id="paystep2" class="form-select" > -->
                 <!-- <option value="NULL"></option> -->
@@ -107,8 +107,8 @@
     <hr>
     <input class="form-submit" type="submit" onclick="processForm()" value="➕ ">
             </form>
-    <div class="resultsHolder">        
-    <p id="resultsblock" style="display: none">THIS ONE</p>
+    <div id="resultsHolder" class="resultsHolder">        
+    <p id="resultsblock" style="display: none">THIS ONE </p>
     <p id="resultsblock2" style="display: none">THIS TOO</p>
     <p id="resultsblock3" style="display: none">ALSO THIS</p>
     </div>
@@ -129,6 +129,7 @@
             document.getElementById("paystep1").style.display-'block';
             document.getElementById("paygrade2").style.display-'block';
             document.getElementById("paystep2").style.display-'block';
+            document.getElementById("resultsHolder").style.display-'block';
             document.getElementById("resultsblock").style.display-'block';
             document.getElementById("resultsblock2").style.display-'block';
             document.getElementById("resultsblock3").style.display-'block';
