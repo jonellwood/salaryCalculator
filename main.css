@@ -3,12 +3,8 @@ html{
     padding: 10;
     font-family: -apple-system÷, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-family: 'Fire Sans', sans-serif;
-    /* font-size:x-large; */
-    background-color: royalblue;
-    /* background-color: tan; */
-    /* background-color:dodgerblue; */
-    /* background-image: url("https://external-preview.redd.it/7_PNegGt98crnDZhmDD3udCjNLVAA5F0CasTv1uM1HQ.jpg?width=640&crop=smart&auto=webp&s=c151a6ec620edf0a3cac750dec33fb2748874309"); */
-    background-size: contain;
+    background-color: royalblue;    
+    background-size:cover;
     box-sizing: border-box;
 }
 @font-face {
@@ -21,6 +17,11 @@ h1{
     color: aliceblue;
     font-weight: 400;
     text-align: center;
+    background-color: rgba(210, 180, 140, .8);
+    padding: 5px;
+    padding-top: 15px;
+    margin: 5px;
+;
 }
 #main{
     font-family: myTopFont;
