@@ -5,17 +5,25 @@ html{
     font-family: 'Fire Sans', sans-serif;
     /* font-size:x-large; */
     background-color: royalblue;
+    /* background-color: tan; */
     /* background-color:dodgerblue; */
     /* background-image: url("https://external-preview.redd.it/7_PNegGt98crnDZhmDD3udCjNLVAA5F0CasTv1uM1HQ.jpg?width=640&crop=smart&auto=webp&s=c151a6ec620edf0a3cac750dec33fb2748874309"); */
     background-size: contain;
     box-sizing: border-box;
 }
+@font-face {
+  font-family: myTopFont;
+  src: url(./fonts/Special_Elite/SpecialElite-Regular.ttf);
+}
+
 h1{
+    font-family: myTopFont;
     color: aliceblue;
     font-weight: 400;
     text-align: center;
 }
 #main{
+    font-family: myTopFont;
     text-align: center;
     color: aliceblue;
 }
@@ -29,7 +37,7 @@ footer {
     /* position: absolute; */
     bottom: 0;
     color: aliceblue;
-    font-size: small;
+    font-size: smaller;
     text-align: center;
 }
 #selectHolder{
