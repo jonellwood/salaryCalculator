@@ -63,7 +63,7 @@ footer {
     margin-top: 10px;
     margin-bottom: 10px;
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: ;
 }
 /* .form-submit{
     border-radius: 3px;
@@ -80,7 +80,7 @@ footer {
   font-size: 2em;
   text-decoration: none;
   display: block;
-  padding: 2spx;
+  padding: 2px;
   border-radius: 8px;
   border: none;
   box-shadow: 0 9px 0 rgba(101, 67, 33, 1),0px 9px 25px rgba(0, 0, 0, .7);
