@@ -115,7 +115,7 @@
     <footer>
         <p>These calculations are an estimate only. Any typographical errors are not the responsibility of the end user.</p> 
         <p>&copy; Jon Ellwood 2022 🔵 
-        Jon Ellwood accepts no responsibility for typographical errors. This site is for amusement purposes only</p>
+        Jon Ellwood accepts no responsibility for typographical errors. This site is for amusement purposes only ☠️</p>
     </footer>
 </div>
 
@@ -1233,8 +1233,8 @@
             
             var annualHours = 2080;
     
-            var salary1= (pr1 * annualHours).toFixed(2);
-            var salary2= (pr2 * annualHours).toFixed(2);        
+            var salary1= (pr1 * annualHours).toFixed(0);
+            var salary2= (pr2 * annualHours).toFixed(0);        
 
             // answerdisplay.innerHTML = "Estimated Salary 1: $" + salary1 + " at a pay rate of $" + pr1 + " /hour";
             answerdisplay.innerHTML = "Estimated Salary 1: $" + (new Intl.NumberFormat().format(salary1)) + " at a pay rate of $" + pr1 + " per hour";
